@@ -1051,3 +1051,231 @@ ul.footer-social-icons.social-icons li a:hover i {
 .backgroundGold.text-dark:hover{
   color: #fff !important;
 }
+
+#mainNav .dropdown-toggle::after {
+    display: none !important;
+    content: none !important;
+}
+/* =========================================
+   HOME DROPDOWN FIX
+========================================= */
+
+/* Desktop dropdown */
+#mainNav .nav-item.dropdown {
+    position: relative;
+}
+
+/* Home button */
+#mainNav .dropdown-toggle {
+    color: #fff !important;
+    position: relative;
+}
+
+/* আবার dropdown arrow দেখাবে */
+#mainNav .dropdown-toggle::after {
+    display: inline-block !important;
+    content: "" !important;
+    margin-left: 8px !important;
+    vertical-align: middle;
+}
+#mainNav .dropdown-toggle::after { 
+    display: none !important; 
+    content: none !important; 
+}
+/* =========================================
+   MOBILE MENU + HOME DROPDOWN FIX
+========================================= */
+
+/* =========================================
+   FINAL HOME DROPDOWN + DESKTOP ALIGNMENT
+========================================= */
+/* =========================================
+   1. DESKTOP MENU ALIGNMENT & HOVER DROPDOWN
+========================================= */
+@media (min-width: 992px) {
+
+    /* Parent item relative position for dropdown alignment */
+    #header #mainNav > li.nav-item.dropdown {
+        position: relative !important;
+    }
+
+    /* Main menu horizontal alignment */
+    #header #mainNav {
+        display: flex !important;
+        align-items: center !important;
+    }
+
+    /* All menu items height */
+    #header #mainNav > li {
+        display: flex !important;
+        align-items: center !important;
+        height: 90px !important;
+    }
+
+    /* HOME dropdown parent li */
+    #header #mainNav > li.nav-item.dropdown.nav-link {
+        padding: 0 !important;
+        margin: 0 !important;
+        height: 90px !important;
+        display: flex !important;
+        align-items: center !important;
+    }
+
+    /* HOME button styling */
+    #header #mainNav > li.nav-item.dropdown.nav-link > .dropdown-toggle {
+        display: flex !important;
+        align-items: center !important;
+        height: 90px !important;
+        padding: 0 20px !important;
+        margin: 0 !important;
+        background: transparent !important;
+        border: 0 !important;
+        border-radius: 0 !important;
+        line-height: normal !important;
+        box-shadow: none !important;
+        color: #ffffff !important;
+    }
+
+    /* Arrow icon for HOME */
+    #header #mainNav > li.nav-item.dropdown.nav-link > .dropdown-toggle::after {
+        display: inline-block !important;
+        margin-left: 7px !important;
+        vertical-align: middle !important;
+    }
+
+    /* Normal menu links (About, Brands, etc.) */
+    #header #mainNav > li:not(.dropdown) > .nav-link {
+        display: flex !important;
+        align-items: center !important;
+        height: 90px !important;
+        padding: 0 20px !important;
+        margin: 0 !important;
+        line-height: normal !important;
+    }
+
+    /* Desktop Hover Dropdown Menu Visibility (Home One visible solution) */
+    #header #mainNav > li.dropdown:hover > .dropdown-menu {
+        display: block !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+        position: absolute !important;
+        top: 100% !important;
+        left: 0 !important;
+        margin-top: 0 !important;
+        min-width: 180px !important;
+    }
+}
+
+
+/* =========================================
+   2. DROPDOWN STYLING (COMMON & HOVER)
+========================================= */
+#header .header-nav-main nav > ul > li.dropdown .dropdown-menu {
+    background-color: #212529 !important;
+    border: none !important;
+    border-radius: 4px !important;
+}
+
+#header .header-nav-main nav > ul > li.dropdown .dropdown-menu li a.dropdown-item {
+    color: #ffffff !important;
+    padding: 10px 16px !important;
+    display: block !important;
+    text-transform: none !important;
+    font-size: 14px !important;
+    background: transparent !important;
+}
+
+#header .header-nav-main nav > ul > li.dropdown .dropdown-menu li a.dropdown-item:hover {
+    background-color: #343a40 !important;
+    color: #ffffff !important;
+}
+
+.fa-chevron-down {
+    margin-left: 4px;
+}
+
+.post-content h2 a{
+  color:#212529;
+}
+.post-content h2 a:hover{
+  text-decoration: none;
+  color: var(--golden-social-icon-color);
+}
+
+/* =========================================
+   3. MOBILE HOME DROPDOWN
+========================================= */
+ @media (max-width: 991px) {
+
+    /* HOME Link in Mobile */
+    #header #mainNav > li.dropdown > a.nav-link {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+        width: 100% !important;
+        height: 58px !important;
+        padding: 0 20px !important;
+        background: transparent !important;
+        border: none !important;
+        color: #d4af37 !important;
+        cursor: pointer;
+    }
+
+    /* Chevron Icon */
+    #header #mainNav > li.dropdown > a.nav-link i.fa-chevron-down {
+        display: inline-block !important;
+        margin-left: 7px !important;
+        transition: transform 0.3s ease !important;
+    }
+
+    /* Arrow rotate when dropdown is active/open */
+    #header #mainNav > li.dropdown.show > a.nav-link i.fa-chevron-down,
+    #header #mainNav > li.dropdown.open > a.nav-link i.fa-chevron-down {
+        transform: rotate(180deg) !important;
+    }
+
+    /* Dropdown hidden by default on mobile */
+    #header #mainNav > li.dropdown > .dropdown-menu {
+        display: none !important;
+        position: static !important;
+        width: 100% !important;
+        min-width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        transform: none !important;
+        background: rgba(255, 255, 255, 0.03) !important;
+        border: none !important;
+        box-shadow: none !important;
+    }
+
+    /* Show dropdown ONLY when active/show class is present */
+    #header #mainNav > li.dropdown.show > .dropdown-menu,
+    #header #mainNav > li.dropdown.open > .dropdown-menu,
+    #header #mainNav > li.dropdown > .dropdown-menu.show {
+        display: block !important;
+    }
+
+    /* Mobile "Home Two" Link */
+    #header #mainNav > li.dropdown > .dropdown-menu > li > a.nav-link {
+        display: block !important;
+        width: 100% !important;
+        padding: 12px 20px 12px 42px !important;
+        color: #ffffff !important;
+        background: transparent !important;
+    }
+
+    /* Hover effect */
+    #header #mainNav > li.dropdown > .dropdown-menu > li > a.nav-link:hover {
+        color: #d4af37 !important;
+    }
+}
+/* Hover করার সময় কালার চেঞ্জ হবে */
+#mainNav > li > .nav-link:hover {
+    color: gold !important; 
+}
+
+
+#mainNav > li > .nav-link.active {
+    color: gold !important; 
+    font-weight: bold;
+}

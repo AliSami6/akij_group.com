@@ -15669,7 +15669,7 @@ html.lightbox-opened .scroll-to-top {
 }
 
 @media (max-width: 991px) {
-	html .scroll-to-top.hidden-mobile {
+	html .scroll-to-top.hidden-mobil\ {
 		display: none !important;
 	}
 }

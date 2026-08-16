@@ -97,8 +97,8 @@
                       <nav class="collapse">
                         <ul class="nav nav-pills" id="mainNav">
                           <li class="dropdown">
-                            <a data-hash class="nav-link active" href="#home">
-                              Home
+                            <a data-hash class="nav-link">
+                              Home <i class="fas fa-chevron-down"></i>
                             </a>
                             <ul class="dropdown-menu">
                               <li>
@@ -1558,6 +1558,39 @@
         });
 
         startAutoSlide();
+      });
+
+      document.addEventListener("DOMContentLoaded", () => {
+        const navLinks = document.querySelectorAll("#mainNav .nav-link");
+
+        // বর্তমান page বের করা
+        let currentPage = window.location.pathname.split("/").pop();
+
+        if (!currentPage) {
+          currentPage = "index.html";
+        }
+
+        // Page অনুযায়ী active class
+        navLinks.forEach((link) => {
+          const href = link.getAttribute("href");
+
+          if (href === currentPage) {
+            link.classList.add("active");
+          } else {
+            link.classList.remove("active");
+          }
+        });
+
+        // Click করার সাথে সাথে active
+        navLinks.forEach((link) => {
+          link.addEventListener("click", function () {
+            navLinks.forEach((item) => {
+              item.classList.remove("active");
+            });
+
+            this.classList.add("active");
+          });
+        });
       });
     </script>
   </body>
