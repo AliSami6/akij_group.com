@@ -1560,35 +1560,46 @@
         startAutoSlide();
       });
 
-      document.addEventListener("DOMContentLoaded", () => {
-        const navLinks = document.querySelectorAll("#mainNav .nav-link");
+      document.addEventListener("DOMContentLoaded", function () {
+        const currentPage =
+          window.location.pathname.split("/").pop() || "index.html";
 
-        // বর্তমান page বের করা
-        let currentPage = window.location.pathname.split("/").pop();
+        const navLinks = document.querySelectorAll("#mainNav > li > .nav-link");
 
-        if (!currentPage) {
-          currentPage = "index.html";
-        }
+        navLinks.forEach(function (link) {
+          link.classList.remove("active");
 
-        // Page অনুযায়ী active class
-        navLinks.forEach((link) => {
-          const href = link.getAttribute("href");
-
-          if (href === currentPage) {
+          if (
+            currentPage === "index.html" &&
+            link.textContent.trim() === "Home"
+          ) {
             link.classList.add("active");
-          } else {
-            link.classList.remove("active");
+          }
+
+          if (link.getAttribute("href") === currentPage) {
+            link.classList.add("active");
           }
         });
+      });
+      document.addEventListener("DOMContentLoaded", function () {
+        const dropdownToggles = document.querySelectorAll(
+          "#mainNav > li.dropdown > a.nav-link",
+        );
 
-        // Click করার সাথে সাথে active
-        navLinks.forEach((link) => {
-          link.addEventListener("click", function () {
-            navLinks.forEach((item) => {
-              item.classList.remove("active");
-            });
+        dropdownToggles.forEach(function (toggle) {
+          toggle.addEventListener("click", function (e) {
+            if (window.innerWidth <= 991) {
+              e.preventDefault(); // ডিফল্ট লিঙ্ক নেভিগেশন বন্ধ করবে
 
-            this.classList.add("active");
+              const parentLi = this.parentElement;
+              const dropdownMenu = parentLi.querySelector(".dropdown-menu");
+
+              // Toggle active/show classes
+              parentLi.classList.toggle("show");
+              if (dropdownMenu) {
+                dropdownMenu.classList.toggle("show");
+              }
+            }
           });
         });
       });
