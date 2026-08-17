@@ -54,110 +54,146 @@ Theme Version:	13.1.0
    }
  });
 
- document.addEventListener("DOMContentLoaded", function () {
-   // 1. Get the current page file name
-   let currentPage = window.location.pathname.split("/").pop();
+document.addEventListener("DOMContentLoaded", function () {
+  /* =========================================
+     1. CURRENT PAGE DETECTION
+  ========================================= */
 
-   // Use index.html when the URL is the root path
-   if (!currentPage || currentPage === "") {
-     currentPage = "index.html";
-   }
+  let currentPage = window.location.pathname.split("/").pop();
 
-   // 2. Remove the active class from all navigation links
-   const allNavLinks = document.querySelectorAll(
-     "#HeaderMainNav .nav-link, #HeaderMainNav .dropdown-item",
-   );
+  if (!currentPage || currentPage === "") {
+    currentPage = "index.html";
+  }
 
-   allNavLinks.forEach(function (link) {
-     link.classList.remove("active");
-   });
+  /* =========================================
+     2. NAVIGATION ACTIVE CLASS
+  ========================================= */
 
-   // 3. Define Home pages
-   const homePages = ["index.html", "index-2.html"];
+  const allNavLinks = document.querySelectorAll(
+    "#HeaderMainNav .nav-link, #HeaderMainNav .dropdown-item",
+  );
 
-   if (homePages.includes(currentPage)) {
-     // Set the Home parent link as active
-     const homeLink = document.querySelector(
-       "#HeaderMainNav #navbarDropdownMenuLink",
-     );
+  allNavLinks.forEach(function (link) {
+    link.classList.remove("active");
+  });
 
-     if (homeLink) {
-       homeLink.classList.add("active");
-     }
+  const homePages = ["index.html", "index-2.html"];
 
-     // If the current page is index-2.html, also activate Home Two
-     if (currentPage === "index-2.html") {
-       const homeTwo = document.querySelector(
-         '#HeaderMainNav .dropdown-item[href="index-2.html"]',
-       );
+  /* =========================================
+     3. HOME ACTIVE
+  ========================================= */
 
-       if (homeTwo) {
-         homeTwo.classList.add("active");
-       }
-     }
-   } else {
-     // 4. Detect and activate the current page navigation link
-     allNavLinks.forEach(function (link) {
-       const href = link.getAttribute("href");
+  if (homePages.includes(currentPage)) {
+    const homeLink = document.querySelector("#navbarDropdownMenuLink");
 
-       if (href && href !== "#") {
-         const linkPage = href.split("/").pop();
+    if (homeLink) {
+      homeLink.classList.add("active");
+    }
 
-         if (linkPage === currentPage) {
-           // Activate the current navigation link
-           link.classList.add("active");
+    if (currentPage === "index-2.html") {
+      const homeTwo = document.querySelector(
+        '#HeaderMainNav .dropdown-item[href="index-2.html"]',
+      );
 
-           // Activate the parent dropdown link if applicable
-           const parentDropdown = link.closest(".dropdown");
+      if (homeTwo) {
+        homeTwo.classList.add("active");
+      }
+    }
+  } else {
+    /* =========================================
+       4. OTHER PAGE ACTIVE
+    ========================================= */
 
-           if (parentDropdown) {
-             const parentNavLink =
-               parentDropdown.querySelector(":scope > .nav-link");
+    allNavLinks.forEach(function (link) {
+      const href = link.getAttribute("href");
 
-             if (parentNavLink) {
-               parentNavLink.classList.add("active");
-             }
-           }
-         }
-       }
-     });
-   }
+      if (!href || href === "#") return;
 
-   // 5. Mobile dropdown toggle logic
-   const dropdownToggles = document.querySelectorAll(
-     "#HeaderMainNav > li.dropdown > a.dropdown-toggle",
-   );
+      const linkPage = href.split("/").pop();
 
-   dropdownToggles.forEach(function (toggle) {
-     toggle.addEventListener("click", function (e) {
-       if (window.innerWidth <= 991) {
-         e.preventDefault();
+      if (linkPage === currentPage) {
+        link.classList.add("active");
 
-         const parentLi = this.parentElement;
-         const dropdownMenu = parentLi.querySelector(".dropdown-menu");
+        const parentDropdown = link.closest(".dropdown");
 
-         // Close all other dropdown menus
-         document
-           .querySelectorAll("#HeaderMainNav > li.dropdown")
-           .forEach(function (li) {
-             if (li !== parentLi) {
-               li.classList.remove("show");
+        if (parentDropdown) {
+          const parentNavLink =
+            parentDropdown.querySelector(".dropdown-toggle");
 
-               const menu = li.querySelector(".dropdown-menu");
+          if (parentNavLink) {
+            parentNavLink.classList.add("active");
+          }
+        }
+      }
+    });
+  }
 
-               if (menu) {
-                 menu.classList.remove("show");
-               }
-             }
-           });
+  /* =========================================
+     5. MOBILE DROPDOWN
+  ========================================= */
 
-         // Toggle the current dropdown menu
-         parentLi.classList.toggle("show");
+  const dropdownToggles = document.querySelectorAll(
+    "#HeaderMainNav .dropdown-toggle",
+  );
 
-         if (dropdownMenu) {
-           dropdownMenu.classList.toggle("show");
-         }
-       }
-     });
-   });
- });
+  dropdownToggles.forEach(function (toggle) {
+    toggle.addEventListener("click", function (e) {
+      /* Only Mobile & Tablet */
+
+      if (window.innerWidth <= 991) {
+        e.preventDefault();
+        e.stopPropagation();
+
+        const parentDropdown = this.closest(".dropdown");
+
+        if (!parentDropdown) return;
+
+        const dropdownMenu = parentDropdown.querySelector(".dropdown-menu");
+
+        /* Close Other Dropdowns */
+
+        document
+          .querySelectorAll("#HeaderMainNav .dropdown")
+          .forEach(function (dropdown) {
+            if (dropdown !== parentDropdown) {
+              dropdown.classList.remove("show");
+
+              const otherMenu = dropdown.querySelector(".dropdown-menu");
+
+              if (otherMenu) {
+                otherMenu.classList.remove("show");
+              }
+            }
+          });
+
+        /* Toggle Current Dropdown */
+
+        parentDropdown.classList.toggle("show");
+
+        if (dropdownMenu) {
+          dropdownMenu.classList.toggle("show");
+        }
+      }
+    });
+  });
+
+  /* =========================================
+     6. CLOSE DROPDOWN ON DESKTOP RESIZE
+  ========================================= */
+
+  window.addEventListener("resize", function () {
+    if (window.innerWidth > 991) {
+      document
+        .querySelectorAll("#HeaderMainNav .dropdown")
+        .forEach(function (dropdown) {
+          dropdown.classList.remove("show");
+
+          const menu = dropdown.querySelector(".dropdown-menu");
+
+          if (menu) {
+            menu.classList.remove("show");
+          }
+        });
+    }
+  });
+});

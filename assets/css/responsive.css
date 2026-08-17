@@ -40,14 +40,14 @@
     flex: 0 0 33.333333%;
     max-width: 33.333333%;
   }
-    .counter-item.has-divider::before {
+.counter-item.has-divider::before {
     content: "";
     position: absolute;
     left: 0;
-    top: 15%;
-    height: 70%;
+    top: 10%;
+    height: 80%;
     width: 1px;
-    background-color: #e0e0e0;
+    background: rgba(0, 0, 0, 0.12);
   }
 }
 
