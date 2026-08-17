@@ -48,7 +48,7 @@
 
     <!-- Skin CSS -->
     <link id="skinCSS" rel="stylesheet" href="assets/css/default.css" />
-   
+
     <!-- Theme Custom CSS -->
     <link rel="stylesheet" href="assets/css/custom.css" />
 
@@ -507,55 +507,86 @@
             </div>
           </div>
         </section>
-        <section
-          class="section section-no-border section-height-3 bg-color-primary my-0">
-          <div class="container">
-            <div class="row counters counters-sm text-light">
+        <section class="stats-section py-5">
+          <div class="container py-4">
+            <div class="row align-items-center g-4 counters counters-sm">
               <!-- Counter 1: Years of Heritage -->
               <div
-                class="col-sm-6 col-lg-3 mb-4 mb-lg-0 appear-animation"
+                class="col-12 col-sm-6 col-md-3 appear-animation"
                 data-appear-animation="fadeInLeftShorter">
-                <div class="counter">
-                  <strong data-to="75" data-append="+">0</strong>
-                  <label class="text-light opacity-6 font-weight-normal pt-1"
-                    >Years of Heritage</label
-                  >
+                <div
+                  class="counter-item d-flex align-items-center justify-content-start justify-content-md-center">
+                  <div class="counter me-2 me-lg-3">
+                    <strong
+                      class="counter-number fw-bold"
+                      data-to="75"
+                      data-append="+"
+                      >0</strong
+                    >
+                  </div>
+                  <span class="counter-label text-muted lh-sm text-start">
+                    Years of<br />Heritage
+                  </span>
                 </div>
               </div>
 
-              <!-- Counter 2: SBUs (Strategic Business Units) -->
+              <!-- Counter 2: SBUs -->
               <div
-                class="col-sm-6 col-lg-3 mb-4 mb-lg-0 appear-animation"
+                class="col-12 col-sm-6 col-md-3 appear-animation"
                 data-appear-animation="fadeInDownShorter">
-                <div class="counter">
-                  <strong data-to="45" data-append="+">0</strong>
-                  <label class="text-light opacity-6 font-weight-normal pt-1"
-                    >Business Units (SBUs)</label
-                  >
+                <div
+                  class="counter-item d-flex align-items-center justify-content-start justify-content-md-center has-divider">
+                  <div class="counter me-2 me-lg-3">
+                    <strong
+                      class="counter-number fw-bold"
+                      data-to="45"
+                      data-append="+"
+                      >0</strong
+                    >
+                  </div>
+                  <span class="counter-label text-muted lh-sm text-start">
+                    Business Units<br />(SBUs)
+                  </span>
                 </div>
               </div>
 
               <!-- Counter 3: Total Employees -->
               <div
-                class="col-sm-6 col-lg-3 mb-4 mb-sm-0 appear-animation"
+                class="col-12 col-sm-6 col-md-3 appear-animation"
                 data-appear-animation="fadeInUpShorter">
-                <div class="counter">
-                  <strong data-to="35000" data-append="+">0</strong>
-                  <label class="text-light opacity-6 font-weight-normal pt-1"
-                    >Employees & Workforce</label
-                  >
+                <div
+                  class="counter-item d-flex align-items-center justify-content-start justify-content-md-center has-divider">
+                  <div class="counter me-2 me-lg-3">
+                    <strong
+                      class="counter-number fw-bold"
+                      data-to="35000"
+                      data-append="+"
+                      >0</strong
+                    >
+                  </div>
+                  <span class="counter-label text-muted lh-sm text-start">
+                    Employees &<br />Workforce
+                  </span>
                 </div>
               </div>
 
               <!-- Counter 4: Exporting Countries -->
               <div
-                class="col-sm-6 col-lg-3 appear-animation"
+                class="col-12 col-sm-6 col-md-3 appear-animation"
                 data-appear-animation="fadeInRightShorter">
-                <div class="counter">
-                  <strong data-to="40" data-append="+">0</strong>
-                  <label class="text-light opacity-6 font-weight-normal pt-1"
-                    >Exporting Countries</label
-                  >
+                <div
+                  class="counter-item d-flex align-items-center justify-content-start justify-content-md-center has-divider">
+                  <div class="counter me-2 me-lg-3">
+                    <strong
+                      class="counter-number fw-bold"
+                      data-to="40"
+                      data-append="+"
+                      >0</strong
+                    >
+                  </div>
+                  <span class="counter-label text-muted lh-sm text-start">
+                    Exporting<br />Countries
+                  </span>
                 </div>
               </div>
             </div>
@@ -837,7 +868,6 @@
           </div>
         </div>
 
-      
         <section
           class="section border-0 position-relative overflow-hidden py-5"
           style="background-color: #121212">
@@ -1326,8 +1356,6 @@
 
         startAutoSlide();
       });
-
-    
     </script>
   </body>
 </html>
