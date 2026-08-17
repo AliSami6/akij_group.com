@@ -58,7 +58,7 @@
     <!-- Current Page CSS -->
     <link rel="stylesheet" href="assets/css/component.css" />
     <!-- Skin CSS -->
-
+    <link rel="stylesheet" href="assets/css/responsive.css" />
     <!-- Swiper Slider CSS -->
     <link rel="stylesheet" href="assets/css/swiper-bundle.min.css" />
     <style></style>
@@ -1289,7 +1289,7 @@
 
             <!-- Career Cards Grid -->
             <!-- Swiper Container -->
-            <div class="swiper careerSwiper px-2 py-4">
+                    <div class="swiper careerSwiper px-2 py-4">
               <div class="swiper-wrapper">
                 <!-- Job Item 1 -->
                 <div class="swiper-slide h-auto">
@@ -1511,7 +1511,7 @@
 
                   <form
                     class="contact-form"
-                    action="https://www.okler.net/previews/porto/13.1.0/php/contact-form.php"
+                    action="#"
                     method="POST">
                     <div
                       class="contact-form-success alert alert-success d-none mt-4">
@@ -1594,7 +1594,6 @@
                 </div>
               </div>
 
-              <!-- ডান পাশ: অফিস ইনফরমেশন -->
               <div class="col-lg-6">
                 <div class="contact-info-box h-100">
                   <div
@@ -2228,31 +2227,25 @@
       });
 
       document.addEventListener("DOMContentLoaded", function () {
-        var careerSwiper = new Swiper(".careerSwiper", {
+          var careerSwiper = new Swiper(".careerSwiper", {
           slidesPerView: 1,
-          spaceBetween: 24,
-          loop: true,
-          autoplay: {
-            delay: 4000,
-            disableOnInteraction: false,
+          spaceBetween: 20,
+          navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
           },
           pagination: {
             el: ".swiper-pagination",
             clickable: true,
           },
-          navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
-          },
           breakpoints: {
-            576: {
-              slidesPerView: 1,
-            },
             768: {
               slidesPerView: 2,
+              spaceBetween: 20,
             },
             992: {
               slidesPerView: 3,
+              spaceBetween: 24,
             },
           },
         });
@@ -2305,10 +2298,6 @@
 
         startAutoSlide();
       });
-
-    
     </script>
-
-   
   </body>
 </html>

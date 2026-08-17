@@ -4,6 +4,12 @@
   --golden-name-badge: #d4a017;
   --golden-social-icon-color: #eacc6a;
   --white-text-color: #000;
+   --bg-dark-charcoal: #141619;
+  --color-gold: #e5c158;
+  --text-muted-gray: #a6adbb;
+  --primary-navy: #1a2b4c;
+  --primary-gold: #e5c158;
+  --text-dark: #22252a;
 }
 
 .owl-carousel .owl-nav .owl-prev,
@@ -41,129 +47,8 @@
   padding: 0 !important;
   display: block !important;
 }
-/* Mobile & Small Screens Responsive Styles */
-@media (max-width: 767px) {
-  /* Main Title (ENDURING PIPELINE SOLUTIONS) */
-  #home h2.text-12 {
-    font-size: 26px !important;
-    line-height: 1.2 !important;
-    word-break: break-word;
-  }
 
-  /* Subtitle (STRENGTH YOU CAN TRUST) */
-  #home h3.text-5 {
-    font-size: 14px !important;
-    line-height: 1.3 !important;
-    padding-left: 10px !important;
-    padding-right: 10px !important;
-  }
 
-  /* Side Borders of Subtitle */
-  #home h3.text-5 img {
-    height: 10px !important;
-    width: auto !important;
-  }
-
-  /* Description Paragraph */
-  #home p.text-4 {
-    font-size: 13px !important;
-    line-height: 1.5 !important;
-    padding: 0 10px;
-  }
-
-  /* Navigation Arrows Adjustments */
-  #home .owl-nav button.owl-prev,
-  #home .owl-nav button.owl-next {
-    width: 32px !important;
-    height: 32px !important;
-    line-height: 32px !important;
-  }
-}
-
-/* Extra Small Mobile Devices (e.g., width < 480px) */
-@media (max-width: 480px) {
-  #home h2.text-12 {
-    font-size: 22px !important;
-  }
-
-  #home h3.text-5 {
-    font-size: 12px !important;
-  }
-
-  #home p.text-4 {
-    font-size: 12px !important;
-  }
-}
-/* Small Mobile Screens (Up to 576px) Fix */
-@media (max-width: 576px) {
-  /* Container */
-  #home .container {
-    padding-left: 15px !important;
-    padding-right: 15px !important;
-    width: 100% !important;
-  }
-
-  #home .col-lg-8 {
-    padding-left: 0 !important;
-    padding-right: 0 !important;
-  }
-
-  /* Main Title Fix */
-  #home h2.text-12 {
-    font-size: 20px !important;
-    line-height: 1.3 !important;
-    letter-spacing: normal !important;
-    margin-bottom: 10px !important;
-    word-break: normal !important;
-  }
-
-  /* Subtitle Fix */
-  #home h3.text-5 {
-    font-size: 11px !important;
-    line-height: 1.4 !important;
-    padding-left: 0 !important;
-    padding-right: 0 !important;
-  }
-
-  /* Title Border Images Hide for Mobile */
-  #home h3.text-5 img {
-    display: none !important;
-  }
-
-  /* Description Paragraph Fix */
-  #home p.text-4 {
-    font-size: 12px !important;
-    line-height: 1.5 !important;
-    padding: 0 5px !important;
-  }
-
-  /* Navigation Arrows */
-  #home .owl-nav {
-    position: absolute;
-    top: 50%;
-    width: 100%;
-    transform: translateY(-50%);
-    pointer-events: none;
-  }
-
-  #home .owl-nav button.owl-prev,
-  #home .owl-nav button.owl-next {
-    pointer-events: auto;
-    width: 28px !important;
-    height: 28px !important;
-    line-height: 28px !important;
-    background: rgba(0, 0, 0, 0.3) !important;
-    border-radius: 50% !important;
-  }
-
-  #home .owl-nav button.owl-prev {
-    left: 5px !important;
-  }
-
-  #home .owl-nav button.owl-next {
-    right: 5px !important;
-  }
-}
 
 /* Custom Image Overlay Caption */
 .custom-img-caption {
@@ -173,15 +58,7 @@
   border-top-left-radius: 8px !important;
 }
 
-/* responsive text for small devices */
-@media (max-width: 575px) {
-  .custom-img-caption h5 {
-    font-size: 13px !important;
-  }
-  .custom-img-caption p {
-    font-size: 11px !important;
-  }
-}
+
 
 /* Chairman Circle Layer Effect */
 
@@ -218,16 +95,6 @@
   margin-right: auto;
 }
 
-/* Responsive Fix for Mobile */
-@media (max-width: 575px) {
-  .golden-three-circles {
-    width: 120px;
-    height: 120px;
-    box-shadow:
-      0 0 0 20px rgba(212, 160, 23, 0.2),
-      0 0 0 40px rgba(212, 160, 23, 0.08);
-  }
-}
 /* Multi-layer Round Golden Circle Effect behind the image */
 .golden-circle-bg {
   position: absolute;
@@ -259,13 +126,6 @@
   margin-right: auto;
 }
 
-/* Mobile responsive fixes */
-@media (max-width: 575px) {
-  .golden-circle-bg {
-    width: 200px;
-    height: 200px;
-  }
-}
 
 /* Glassmorphism Effect for Right Card */
 .custom-glass-card {
@@ -576,62 +436,6 @@
 /* ==========================================
    2. MOBILE RESPONSIVE FIX (Max-width: 768px)
    ========================================== */
-@media (max-width: 768px) {
-  .timeline-container {
-    padding: 20px 10px;
-    margin: 20px auto;
-  }
-
-  /* Move Vertical Lines to the Left */
-  .timeline::after,
-  .timeline::before {
-    left: 20px;
-    transform: none;
-  }
-
-  /* Items Take Full Width to the Right */
-  .timeline-item {
-    width: 100% !important;
-    padding-left: 55px !important;
-    padding-right: 10px !important;
-    margin-bottom: 30px;
-  }
-
-  .timeline-item.left,
-  .timeline-item.right {
-    left: 0 !important;
-    text-align: left !important;
-  }
-
-  .timeline-item.left .timeline-header-wrap {
-    flex-direction: row !important;
-  }
-
-  /* Align Dots with Left Line */
-  .timeline-item.left .timeline-dot,
-  .timeline-item.right .timeline-dot {
-    left: 13px !important;
-    right: auto !important;
-  }
-
-  /* Hide Outer Dates on Mobile (Year Tag Inside Card is Used) */
-  .timeline-date {
-    display: none !important;
-  }
-
-  /* Adjust Pointer Arrow for All Left Items */
-  .timeline-item.left .timeline-content::before,
-  .timeline-item.right .timeline-content::before {
-    left: -10px !important;
-    right: auto !important;
-    border-width: 8px 10px 8px 0 !important;
-    border-color: transparent #f0cb5d transparent transparent !important;
-  }
-
-  .timeline-content:hover {
-    transform: none !important; /* Touch screen hover fix */
-  }
-}
 
 /* Card Height & Layout Fixes */
 .card {
@@ -861,21 +665,73 @@
   box-sizing: border-box;
 }
 
-/* Tablet (Medium screens): 2 Items */
+.custom-news-slider-wrapper {
+  width: 100%;
+}
+
+.custom-news-slider {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  will-change: transform;
+}
+
+.custom-slide-item {
+  flex: 0 0 100%; /* Mobile Layout */
+  max-width: 100%;
+  padding: 0 12px;
+  box-sizing: border-box;
+}
+
+/* Responsive Slide Widths */
 @media (min-width: 768px) {
   .custom-slide-item {
-    flex: 0 0 50%;
+    flex: 0 0 50%; /* Tablet: 2 items */
     max-width: 50%;
   }
 }
 
-/* Desktop (Large screens): 3 Items */
 @media (min-width: 992px) {
   .custom-slide-item {
-    flex: 0 0 33.333333%;
+    flex: 0 0 33.333333%; /* Desktop: 3 items */
     max-width: 33.333333%;
   }
 }
+
+/* Fix Image Aspect Ratio & Size */
+.custom-slide-item .card-img-top {
+  width: 100%;
+  height: 200px; /* Fixed Height */
+  object-fit: cover; /* Crop image cleanly without stretching */
+  object-position: center;
+}
+
+/* Card Hover Premium Transition */
+.custom-slide-item .card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.custom-slide-item .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Share Button Style */
+.btn-share-icon {
+  width: 35px;
+  height: 35px;
+  border: 1px solid #e0e0e0;
+  background-color: #ffffff;
+  color: #666;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.btn-share-icon:hover {
+  background-color: var(--bs-primary, #c5a059);
+  color: #ffffff;
+  border-color: var(--bs-primary, #c5a059);
+}
+
 
 .swiper-button-next,
 .swiper-button-prev {
@@ -1139,3 +995,343 @@ ul.footer-social-icons.social-icons li a:hover i {
 /*===========================
 ---- --- Header End
 =============================*/
+/* Palette Definitions */
+
+
+/* Base Footer Section */
+.akij-modern-footer {
+  background-color: var(--bg-dark-charcoal);
+  border-radius: 20px 20px 0 0;
+  position: relative;
+  z-index: 1;
+}
+
+.text-gold {
+  color: var(--color-gold) !important;
+}
+
+.text-light-gray {
+  color: var(--text-muted-gray) !important;
+}
+
+.fs-7 {
+  font-size: 0.825rem;
+}
+
+/* Hover Effects */
+.hover-gold:hover {
+  color: var(--color-gold) !important;
+  opacity: 1 !important;
+}
+
+/* Contact Info Formatting */
+.footer-contact-info li {
+  line-height: 1.4;
+}
+
+.footer-contact-info strong {
+  min-width: fit-content;
+}
+
+/* Footer Links & Navigation */
+.footer-menu-links li {
+  margin-bottom: 0.35rem;
+}
+
+.footer-menu-links a {
+  color: var(--text-muted-gray);
+  text-decoration: none;
+  font-size: 0.875rem;
+  transition: all 0.25s ease;
+  opacity: 0.8;
+}
+
+.footer-menu-links a:hover {
+  color: var(--color-gold);
+  opacity: 1;
+  padding-left: 3px;
+}
+
+/* Social Icon Styling */
+.social-links a {
+  color: var(--text-muted-gray);
+  font-size: 1.05rem;
+  transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+  color: var(--color-gold);
+}
+
+/* Giant Background Watermark (Lighter Text Color & Perfect Left Alignment) */
+.footer-giant-watermark {
+  width: 100%;
+  font-size: clamp(3.5rem, 11vw, 9.5rem);
+  font-weight: 900;
+  letter-spacing: -2px;
+
+  background: linear-gradient(
+    90deg, 
+    rgba(227, 176, 8, 0.08) 0%,   
+    rgba(227, 176, 8, 0.75) 50%,   
+    rgba(227, 176, 8, 0.08) 100%   
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  line-height: 0.8;
+  margin-top: 0.5rem;
+  margin-bottom: -0.5rem;
+  padding-left: 0;
+  text-align: center;
+  user-select: none;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+/* Media Queries for responsive reset */
+@media (max-width: 1400px), (max-width: 1200px), (max-width: 992px), (max-width: 768px) {
+  .footer-giant-watermark {
+    padding-left: 0 !important;
+  }
+}
+
+/* Color Palette & Variables */
+
+
+/* Typography & Section Title */
+.section-subtitle {
+  color: var(--primary-navy);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  color: var(--text-dark);
+  letter-spacing: -0.5px;
+}
+
+.section-divider {
+  width: 50px;
+  height: 3px;
+  background-color: var(--golden-name-badge);
+  border-radius: 2px;
+}
+
+/* Featured Cards Style */
+.featured-news-card {
+  min-height: 380px;
+  background-color: #f4b10994;
+}
+
+.featured-news-card img {
+  transition: transform 0.4s ease;
+}
+
+.featured-news-card:hover img {
+  transform: scale(1.05);
+}
+
+.card-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg, 
+    rgba(26, 43, 76, 0.2) 0%, 
+    rgba(26, 43, 76, 0.85) 100%
+  );
+  z-index: 2;
+}
+
+.news-date {
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.news-title {
+  font-size: 1.35rem;
+  line-height: 1.3;
+}
+
+.read-more-link {
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: gap 0.3s ease;
+}
+
+.featured-news-card:hover .read-more-link {
+  gap: 10px !important;
+  color: var(--primary-gold) !important;
+}
+
+/* Right Side News List */
+.news-list-title {
+  color: var(--primary-navy);
+  font-size: 1rem;
+  line-height: 1.4;
+  transition: color 0.25s ease;
+}
+
+.news-list-title:hover {
+  color: var(--primary-gold);
+  text-decoration: underline !important;
+}
+
+.fs-7 {
+  font-size: 0.825rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 991px) {
+  .featured-news-card {
+    min-height: 320px;
+  }
+  .news-list-wrapper {
+    margin-top: 1.5rem;
+  }
+}
+
+/* Section Background & Global Styles */
+.stats-section {
+  background-color: #f9f9f9;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  color: #111111;
+}
+
+/* Counter Item Styling */
+.counter-item {
+  padding: 10px 15px;
+  position: relative;
+}
+
+
+/* Counter Wrapper Override */
+.counter-item .counter {
+  display: inline-flex;
+  align-items: center;
+  margin: 0;
+}
+
+/* Counter Number Formatting */
+.counter-number {
+  font-size: 3.25rem !important;
+  line-height: 1 !important;
+  color: #000000 !important;
+  letter-spacing: -1.5px;
+  font-weight: 700 !important;
+}
+
+/* Counter Label Formatting */
+.counter-label {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #666666 !important;
+  text-transform: lowercase;
+}
+
+/* Swiper Container Structure Reset */
+#careers .careerSwiper {
+  position: relative;
+  padding-left: 50px !important;
+  padding-right: 50px !important;
+  overflow: hidden; 
+}
+#careers .swiper-button-prev svg,
+#careers .swiper-button-next svg {
+  width: 14px;
+  height: 24px;
+  display: block;
+}
+/* Swiper Default Pseudo Element Hide */
+#careers .swiper-button-prev::after,
+#careers .swiper-button-next::after {
+  display: none !important;
+}
+
+/* অ্যারো বাটন দুটির মূল পজিশনিং */
+#careers .swiper-button-prev,
+#careers .swiper-button-next {
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  margin-top: 0;
+  color: #212529; /* আপনার থিম অনুযায়ী কালার পরিবর্তন করতে পারেন */
+  transition: all 0.3s ease;
+  z-index: 10;
+}
+
+/* Previous (বাম) অ্যারো স্লাইডারের বাইরে পজিশন */
+#careers .swiper-button-prev {
+  left: 0;
+}
+
+/* Next (ডান) অ্যারো স্লাইডারের বাইরে পজিশন */
+#careers .swiper-button-next {
+  right: 0;
+}
+
+/* Hover Effect */
+#careers .swiper-button-prev:hover,
+#careers .swiper-button-next:hover {
+  opacity: 0.7;
+}
+
+/* স্লাইডের একদম শেষ বা শুরুতে পৌঁছালে নিষ্ক্রিয় অবস্থার স্টাইল */
+#careers .swiper-button-disabled {
+  opacity: 0.25;
+  cursor: not-allowed;
+}
+
+/* রেসপন্সিভ মোবাইল ডিভাইসের জন্য অ্যাডজাস্টমেন্ট */
+@media (max-width: 575px) {
+  #careers .careerSwiper {
+    padding-left: 35px !important;
+    padding-right: 35px !important;
+  }
+  
+  #careers .swiper-button-prev,
+  #careers .swiper-button-next {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+/* Navigation Button Styling & Position Outside */
+#careers .swiper-button-prev,
+#careers .swiper-button-next {
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  margin-top: 0;
+  color: #212529;
+  transition: all 0.3s ease;
+  z-index: 10;
+}
+
+#careers .swiper-button-prev {
+  left: 5px;
+}
+
+#careers .swiper-button-next {
+  right: 5px;
+}
+
+#careers .swiper-button-prev:hover,
+#careers .swiper-button-next:hover {
+  opacity: 0.7;
+}
+
+#careers .swiper-button-disabled {
+  opacity: 0.25;
+  cursor: not-allowed;
+}
+
+@media (max-width: 575px) {
+  #careers .careerSwiper {
+    padding-left: 35px !important;
+    padding-right: 35px !important;
+  }
+}

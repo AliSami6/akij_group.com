@@ -57,7 +57,8 @@
 
     <!-- Current Page CSS -->
     <link rel="stylesheet" href="assets/css/component.css" />
-    <!-- Skin CSS -->
+    <!-- responsive CSS -->
+    <link rel="stylesheet" href="assets/css/responsive.css" />
 
     <!-- Swiper Slider CSS -->
     <link rel="stylesheet" href="assets/css/swiper-bundle.min.css" />
@@ -836,7 +837,7 @@
           <div class="container">
             <div class="row pt-4">
               <h1
-                class="word-rotator slide font-weight-bold text-8 mb-3 appear-animation"
+                class="word-rotator slide font-weight-bold text-8 mb-3 appear-animation text-center"
                 data-appear-animation="fadeInUpShorter">
                 <span>Let's Explore The </span>
                 <span class="word-rotator-words bg-primary">
@@ -1096,253 +1097,210 @@
         </section>
 
         <!-- end planning -->
-        <section
-          class="section section-no-border section-height-3 bg-color-primary my-0">
-          <div class="container">
-            <div class="row counters counters-sm text-light">
+        <section class="stats-section py-5">
+          <div class="container py-4">
+            <div class="row align-items-center g-0 counters counters-sm">
               <!-- Counter 1: Years of Heritage -->
               <div
-                class="col-sm-6 col-lg-3 mb-4 mb-lg-0 appear-animation"
+                class="col-6 col-md-3 appear-animation"
                 data-appear-animation="fadeInLeftShorter">
-                <div class="counter">
-                  <strong data-to="75" data-append="+">0</strong>
-                  <label class="text-light opacity-6 font-weight-normal pt-1"
-                    >Years of Heritage</label
-                  >
+                <div
+                  class="counter-item d-flex align-items-center justify-content-start justify-content-md-center">
+                  <div class="counter">
+                    <strong
+                      class="counter-number fw-bold me-2 me-lg-3"
+                      data-to="75"
+                      data-append="+"
+                      >0</strong
+                    >
+                  </div>
+                  <span class="counter-label text-muted lh-sm text-start">
+                    Years of<br />Heritage
+                  </span>
                 </div>
               </div>
 
-              <!-- Counter 2: SBUs (Strategic Business Units) -->
+              <!-- Counter 2: SBUs -->
               <div
-                class="col-sm-6 col-lg-3 mb-4 mb-lg-0 appear-animation"
+                class="col-6 col-md-3 appear-animation"
                 data-appear-animation="fadeInDownShorter">
-                <div class="counter">
-                  <strong data-to="45" data-append="+">0</strong>
-                  <label class="text-light opacity-6 font-weight-normal pt-1"
-                    >Business Units (SBUs)</label
-                  >
+                <div
+                  class="counter-item d-flex align-items-center justify-content-start justify-content-md-center has-divider">
+                  <div class="counter">
+                    <strong
+                      class="counter-number fw-bold me-2 me-lg-3"
+                      data-to="45"
+                      data-append="+"
+                      >0</strong
+                    >
+                  </div>
+                  <span class="counter-label text-muted lh-sm text-start">
+                    Business Units<br />(SBUs)
+                  </span>
                 </div>
               </div>
 
               <!-- Counter 3: Total Employees -->
               <div
-                class="col-sm-6 col-lg-3 mb-4 mb-sm-0 appear-animation"
+                class="col-6 col-md-3 mt-4 mt-md-0 appear-animation"
                 data-appear-animation="fadeInUpShorter">
-                <div class="counter">
-                  <strong data-to="35000" data-append="+">0</strong>
-                  <label class="text-light opacity-6 font-weight-normal pt-1"
-                    >Employees & Workforce</label
-                  >
+                <div
+                  class="counter-item d-flex align-items-center justify-content-start justify-content-md-center has-divider">
+                  <div class="counter">
+                    <strong
+                      class="counter-number fw-bold me-2 me-lg-3"
+                      data-to="35000"
+                      data-append="+"
+                      >0</strong
+                    >
+                  </div>
+                  <span class="counter-label text-muted lh-sm text-start">
+                    Employees &<br />Workforce
+                  </span>
                 </div>
               </div>
 
               <!-- Counter 4: Exporting Countries -->
               <div
-                class="col-sm-6 col-lg-3 appear-animation"
+                class="col-6 col-md-3 mt-4 mt-md-0 appear-animation"
                 data-appear-animation="fadeInRightShorter">
-                <div class="counter">
-                  <strong data-to="40" data-append="+">0</strong>
-                  <label class="text-light opacity-6 font-weight-normal pt-1"
-                    >Exporting Countries</label
-                  >
+                <div
+                  class="counter-item d-flex align-items-center justify-content-start justify-content-md-center has-divider">
+                  <div class="counter">
+                    <strong
+                      class="counter-number fw-bold me-2 me-lg-3"
+                      data-to="40"
+                      data-append="+"
+                      >0</strong
+                    >
+                  </div>
+                  <span class="counter-label text-muted lh-sm text-start">
+                    Exporting<br />Countries
+                  </span>
                 </div>
               </div>
             </div>
           </div>
         </section>
-        <section class="section section-height-3 border-0 m-0 bg-color-light">
+        <section class="news-media-section py-5 bg-color-light">
           <div class="container py-4">
             <!-- Section Title -->
-            <div class="row text-center mb-4">
+            <div class="row text-center mb-5">
               <div class="col-12">
-                <span
-                  class="text-uppercase text-color-primary font-weight-bold text-2 tracking-1 d-block mb-1">
+                <span class="text-uppercase section-subtitle d-block mb-1">
                   Explore Our
                 </span>
-                <h2 class="font-weight-bold text-8 text-color-dark mb-0">
+                <h2 class="section-title fw-bold text-dark mb-3">
                   News & Media
                 </h2>
+                <div class="section-divider mx-auto"></div>
               </div>
             </div>
 
-            <div
-              class="custom-news-slider-wrapper position-relative overflow-hidden py-4">
-              <div class="custom-news-slider d-flex" id="newsSlider">
-                <!-- Item 1: Fashion Galleria -->
-                <div class="custom-slide-item">
-                  <div class="card border-0 shadow-sm rounded-0 h-100">
-                    <img
-                      class="card-img-top rounded-0"
-                      src="assets/img/news-1.jpg"
-                      alt="Fashion Galleria" />
-                    <div
-                      class="card-body p-4 d-flex flex-column justify-content-between">
-                      <div>
-                        <h4
-                          class="card-title mb-1 text-4 font-weight-bold text-color-dark">
-                          Fashion Galleria
-                        </h4>
-                        <div
-                          class="text-color-primary font-weight-semibold text-2 mb-2">
-                          <i class="far fa-calendar-alt me-1"></i> 2025-01-14
-                        </div>
-                        <p
-                          class="card-text mb-3 text-2 text-color-dark line-height-6">
-                          Level-2 of the building is named Fashion Galleria
-                          where there is a huge collection of all the modern and
-                          wanted local and foreign garments, shoes,
-                          show-piece...
-                        </p>
-                      </div>
-                      <div
-                        class="d-flex align-items-center justify-content-between pt-2">
-                        <a
-                          href="#"
-                          class="read-more text-color-primary font-weight-semibold text-2"
-                          >Read More
-                          <i
-                            class="fas fa-angle-right position-relative top-1 ms-1"></i
-                        ></a>
-                        <button
-                          class="btn-share-icon rounded-circle d-flex align-items-center justify-content-center"
-                          title="Share">
-                          <i class="fas fa-share-alt"></i>
-                        </button>
-                      </div>
-                    </div>
+            <!-- News Grid Layout -->
+            <div class="row g-4">
+              <!-- Featured Card 1: Fashion Galleria -->
+              <div class="col-lg-4 col-md-6">
+                <div
+                  class="featured-news-card position-relative rounded-3 overflow-hidden shadow-sm h-100">
+                  <img
+                    src="assets/img/news-1.jpg"
+                    alt="Fashion Galleria"
+                    class="w-100 h-100 object-fit-cover" />
+                  <div
+                    class="card-overlay p-4 d-flex flex-column justify-content-end">
+                    <span class="news-date text-white-50 mb-2"
+                      >January 14, 2025</span
+                    >
+                    <h3 class="news-title text-white fw-bold mb-3">
+                      Fashion Galleria
+                    </h3>
+                    <a
+                      href="#"
+                      class="read-more-link text-white text-decoration-none d-inline-flex align-items-center gap-2">
+                      Read More <i class="fas fa-arrow-right"></i>
+                    </a>
                   </div>
                 </div>
+              </div>
 
-                <!-- Item 2: FAMILY MART -->
-                <div class="custom-slide-item">
-                  <div class="card border-0 shadow-sm rounded-0 h-100">
-                    <img
-                      class="card-img-top rounded-0"
-                      src="assets/img/news-2.jpg"
-                      alt="FAMILY MART" />
-                    <div
-                      class="card-body p-4 d-flex flex-column justify-content-between">
-                      <div>
-                        <h4
-                          class="card-title mb-1 text-4 font-weight-bold text-color-dark">
-                          FAMILY MART
-                        </h4>
-                        <div
-                          class="text-color-primary font-weight-semibold text-2 mb-2">
-                          <i class="far fa-calendar-alt me-1"></i> 2025-01-14
-                        </div>
-                        <p
-                          class="card-text mb-3 text-2 text-color-dark line-height-6">
-                          The ground floor of that five-stored building is named
-                          as Unique Mart. Here, there is a range of all
-                          authentic and unique products and services for your
-                          family. Variety of...
-                        </p>
-                      </div>
-                      <div
-                        class="d-flex align-items-center justify-content-between pt-2">
-                        <a
-                          href="#"
-                          class="read-more text-color-primary font-weight-semibold text-2"
-                          >Read More
-                          <i
-                            class="fas fa-angle-right position-relative top-1 ms-1"></i
-                        ></a>
-                        <button
-                          class="btn-share-icon rounded-circle d-flex align-items-center justify-content-center"
-                          title="Share">
-                          <i class="fas fa-share-alt"></i>
-                        </button>
-                      </div>
-                    </div>
+              <!-- Featured Card 2: FAMILY MART -->
+              <div class="col-lg-4 col-md-6">
+                <div
+                  class="featured-news-card position-relative rounded-3 overflow-hidden shadow-sm h-100">
+                  <img
+                    src="assets/img/news-2.jpg"
+                    alt="FAMILY MART"
+                    class="w-100 h-100 object-fit-cover" />
+                  <div
+                    class="card-overlay p-4 d-flex flex-column justify-content-end">
+                    <span class="news-date text-white-50 mb-2"
+                      >January 14, 2025</span
+                    >
+                    <h3 class="news-title text-white fw-bold mb-3">
+                      FAMILY MART
+                    </h3>
+                    <a
+                      href="#"
+                      class="read-more-link text-white text-decoration-none d-inline-flex align-items-center gap-2">
+                      Read More <i class="fas fa-arrow-right"></i>
+                    </a>
                   </div>
                 </div>
+              </div>
 
-                <!-- Item 3: Akij City Center -->
-                <div class="custom-slide-item">
-                  <div class="card border-0 shadow-sm rounded-0 h-100">
-                    <img
-                      class="card-img-top rounded-0"
-                      src="assets/img/news-3.jpg"
-                      alt="Akij City Center" />
-                    <div
-                      class="card-body p-4 d-flex flex-column justify-content-between">
-                      <div>
-                        <h4
-                          class="card-title mb-1 text-4 font-weight-bold text-color-dark">
-                          Akij City Center
-                        </h4>
-                        <div
-                          class="text-color-primary font-weight-semibold text-2 mb-2">
-                          <i class="far fa-calendar-alt me-1"></i> 2025-01-14
-                        </div>
-                        <p
-                          class="card-text mb-3 text-2 text-color-dark line-height-6">
-                          “City Business Centre” from where you can place your
-                          flight booking for the holy Hajj, Omra Haj.
-                        </p>
-                      </div>
-                      <div
-                        class="d-flex align-items-center justify-content-between pt-2">
-                        <a
-                          href="#"
-                          class="read-more text-color-primary font-weight-semibold text-2"
-                          >Read More
-                          <i
-                            class="fas fa-angle-right position-relative top-1 ms-1"></i
-                        ></a>
-                        <button
-                          class="btn-share-icon rounded-circle d-flex align-items-center justify-content-center"
-                          title="Share">
-                          <i class="fas fa-share-alt"></i>
-                        </button>
-                      </div>
-                    </div>
+              <!-- Right Column: News List -->
+              <div class="col-lg-4 col-md-12">
+                <div
+                  class="news-list-wrapper d-flex flex-column justify-content-between h-100 ps-lg-3">
+                  <!-- List Item 1 -->
+                  <div class="news-list-item pb-3 mb-3 border-bottom">
+                    <a
+                      href="#"
+                      class="news-list-title text-decoration-none fw-bold d-block mb-1">
+                      Akij City Center - Flight booking for holy Hajj & Omra.
+                    </a>
+                    <span class="news-list-date text-muted fs-7"
+                      >January 14, 2025</span
+                    >
                   </div>
-                </div>
 
-                <!-- Item 4: The Strategies -->
-                <div class="custom-slide-item">
-                  <div class="card border-0 shadow-sm rounded-0 h-100">
-                    <img
-                      class="card-img-top rounded-0"
-                      src="assets/img/news-4.jpg"
-                      alt="The Strategies" />
-                    <div
-                      class="card-body p-4 d-flex flex-column justify-content-between">
-                      <div>
-                        <h4
-                          class="card-title mb-1 text-4 font-weight-bold text-color-dark">
-                          The Strategies
-                        </h4>
-                        <div
-                          class="text-color-primary font-weight-semibold text-2 mb-2">
-                          <i class="far fa-calendar-alt me-1"></i> 2025-01-14
-                        </div>
-                        <p
-                          class="card-text mb-3 text-2 text-color-dark line-height-6">
-                          Since then it has been progressing with tremendous
-                          pace in the industrial area of Bangladesh. A large
-                          number of people are employed by the group and cared
-                          for as...
-                        </p>
-                      </div>
-                      <div
-                        class="d-flex align-items-center justify-content-between pt-2">
-                        <a
-                          href="#"
-                          class="read-more text-color-primary font-weight-semibold text-2"
-                          >Read More
-                          <i
-                            class="fas fa-angle-right position-relative top-1 ms-1"></i
-                        ></a>
-                        <button
-                          class="btn-share-icon rounded-circle d-flex align-items-center justify-content-center"
-                          title="Share">
-                          <i class="fas fa-share-alt"></i>
-                        </button>
-                      </div>
-                    </div>
+                  <!-- List Item 2 -->
+                  <div class="news-list-item pb-3 mb-3 border-bottom">
+                    <a
+                      href="#"
+                      class="news-list-title text-decoration-none fw-bold d-block mb-1">
+                      The Strategies - Progressing with tremendous pace in
+                      industrial area.
+                    </a>
+                    <span class="news-list-date text-muted fs-7"
+                      >January 14, 2025</span
+                    >
+                  </div>
+
+                  <!-- List Item 3 -->
+                  <div class="news-list-item pb-3 mb-3 border-bottom">
+                    <a
+                      href="#"
+                      class="news-list-title text-decoration-none fw-bold d-block mb-1">
+                      Level-2 Collection of modern garments, shoes and
+                      show-piece.
+                    </a>
+                    <span class="news-list-date text-muted fs-7"
+                      >January 14, 2025</span
+                    >
+                  </div>
+
+                  <!-- List Item 4 -->
+                  <div class="news-list-item">
+                    <a
+                      href="#"
+                      class="news-list-title text-decoration-none fw-bold d-block mb-1">
+                      Unique Mart offers range of authentic and unique products.
+                    </a>
+                    <span class="news-list-date text-muted fs-7"
+                      >January 14, 2025</span
+                    >
                   </div>
                 </div>
               </div>
@@ -2002,156 +1960,134 @@
         <!-- map end -->
       </div>
 
-      <footer id="footer" class="footer-texts-more-lighten">
-        <div class="container">
-          <div class="row py-4 my-5">
-            <!-- Col 4: Subscribe Newsletter -->
-            <div class="col-md-6 col-lg-4">
-              <div class="d-flex align-items-center mb-3">
-                <img
-                  src="assets/img/logo.svg"
-                  alt="Akij Logo"
-                  style="width: 48px"
-                  class="me-3" />
-
-                <!-- Corner Border Wrapper -->
-                <div class="quote-corner-box">
-                  <p class="text-3 text-color-light opacity-8 mb-0 fw-bold">
-                    "Quality First" <br />
-                    <small class="fw-normal">- Sk. Akij Uddin</small>
-                  </p>
-                </div>
+      <footer
+        id="footer"
+        class="akij-modern-footer text-white pt-4 pb-0 position-relative overflow-hidden">
+        <div class="container py-3 position-relative z-index-2">
+          <div class="row g-3 justify-content-between">
+            <!-- Column 1: Brand Info -->
+            <div class="col-lg-4 col-md-12 mb-3 mb-lg-0">
+              <div class="mb-1">
+                <h2 class="text-uppercase text-gold fw-bold mb-1 fs-3">
+                  Akij Group
+                </h2>
               </div>
-              <p class="text-color-light opacity-8 text-2">
+              <p class="text-light-gray text-2 lh-base mb-2 opacity-75">
                 Mr. Akij Uddin, born in 1929 in Khulna, Bangladesh, began as a
                 fruit vendor in 1950 and rose to become a pioneering
                 entrepreneur. Through vision and leadership, he built Akij
                 Group.
               </p>
-              <p class="text-color-light opacity-8 text-2">
+              <p class="text-light-gray text-2 lh-base opacity-75 mb-0">
                 He passed away in 2006, leaving behind a lasting legacy of
                 innovation and enterprise.
               </p>
-              <a
-                href="#"
-                class="btn-flat btn-xs text-color-light opacity-9 mt-2 d-inline-block">
-                <strong class="text-2">VIEW MORE</strong>
-                <i class="fas fa-angle-right ps-2"></i>
-              </a>
             </div>
 
-            <!-- Col 2: Useful Links -->
-            <div class="col-md-6 col-lg-2 mb-5 mb-lg-0">
-              <h5 class="text-4 text-color-light mb-3">USEFUL LINKS</h5>
-              <ul class="list list-unstyled mb-0">
-                <li class="mb-0"><a href="index-2.html">Home</a></li>
-                <li class="mb-0"><a href="about-2.html">About Us</a></li>
-                <li class="mb-0"><a href="brand-2.html">Brands</a></li>
-                <li class="mb-0"><a href="news-2.html">News & Media</a></li>
-                <li class="mb-0"><a href="career.html">Careers</a></li>
-                <li class="mb-0"><a href="contact-2.html">Contact Us</a></li>
-                <li class="mb-0"><a href="#">Privacy Policy</a></li>
-                <li class="mb-0"><a href="#">Terms & Condition</a></li>
+            <!-- Column 2: Useful Links -->
+            <div class="col-6 col-md-3 col-lg-2">
+              <h5 class="text-gold fw-bold mb-2 fs-6">Useful Links</h5>
+              <ul class="list-unstyled footer-menu-links mb-0">
+                <li><a href="index-2.html">Home</a></li>
+                <li><a href="about-2.html">About Us</a></li>
+                <li><a href="brand-2.html">Brands</a></li>
+                <li><a href="news-2.html">News & Media</a></li>
+                <li><a href="career.html">Careers</a></li>
+                <li><a href="contact-2.html">Contact Us</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms & Condition</a></li>
               </ul>
             </div>
 
-            <!-- Col 3: Top Brands (Replacing Recent News) -->
-            <div class="col-md-6 col-lg-3 mb-5 mb-md-0">
-              <h5 class="text-4 text-color-light mb-3">TOP BRANDS</h5>
-              <ul class="list list-unstyled mb-0">
-                <li class="mb-2">
-                  <a href="https://www.akijjute.com/">Akij Jute</a>
-                </li>
-                <li class="mb-2">
-                  <a href="https://www.akijplastics.com/">Akij Plastics</a>
-                </li>
-                <li class="mb-2">
-                  <a href="https://www.akijpipes.com/">Akij Pipes</a>
-                </li>
-                <li class="mb-2"><a href="#">Akij Match</a></li>
-                <li class="mb-2"><a href="#">Akij Nasir Trust</a></li>
-                <li class="mb-2">
-                  <a href="https://akijcity.com/">Akij City Center</a>
-                </li>
-              </ul>
-            </div>
-
-            <!-- Col 1: Contact Info -->
-
-            <div class="col-md-6 col-lg-3 mb-5 mb-lg-0">
-              <h5 class="text-4 text-color-light mb-3">CONTACT INFO</h5>
-              <ul class="list list-unstyled">
-                <li class="pb-1 mb-2">
-                  <span
-                    class="d-block font-weight-normal line-height-1 text-color-light"
-                    >ADDRESS</span
+            <!-- Column 3: Top Brands -->
+            <div class="col-6 col-md-3 col-lg-2">
+              <h5 class="text-gold fw-bold mb-2 fs-6">Top Brands</h5>
+              <ul class="list-unstyled footer-menu-links mb-0">
+                <li>
+                  <a href="https://www.akijjute.com/" target="_blank"
+                    >Akij Jute</a
                   >
+                </li>
+                <li>
+                  <a href="https://www.akijplastics.com/" target="_blank"
+                    >Akij Plastics</a
+                  >
+                </li>
+                <li>
+                  <a href="https://www.akijpipes.com/" target="_blank"
+                    >Akij Pipes</a
+                  >
+                </li>
+                <li><a href="#">Akij Match</a></li>
+                <li><a href="#">Akij Nasir Trust</a></li>
+                <li>
+                  <a href="https://akijcity.com/" target="_blank"
+                    >Akij City Center</a
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <!-- Column 4: Contact Info -->
+            <div class="col-lg-3 col-md-6">
+              <h5 class="text-gold fw-bold mb-2 fs-6">Contact Info</h5>
+              <ul class="list-unstyled footer-contact-info text-2 mb-2">
+                <li class="mb-2 text-light-gray opacity-75">
+                  <strong class="text-white fw-bold me-1">ADDRESS:</strong>
                   Akij Group Sakhawat Sarak, Akij House, 198 Bir Uttam Mir
                   Shawkat Sarak, Dhaka 1208
                 </li>
-                <li class="pb-1 mb-2">
-                  <span
-                    class="d-block font-weight-normal line-height-1 text-color-light"
-                    >PHONE</span
+                <li class="mb-2 d-flex align-items-center gap-2">
+                  <strong class="text-white fw-bold">PHONE:</strong>
+                  <a
+                    href="tel:+88029881680"
+                    class="text-light-gray text-decoration-none opacity-75 hover-gold"
+                    >+880 2-9881680</a
                   >
-                  <a href="tel:+88029881680">+880 2-9881680</a>
                 </li>
-                <li class="pb-1 mb-2">
-                  <span
-                    class="d-block font-weight-normal line-height-1 text-color-light"
-                    >EMAIL</span
+                <li class="mb-2 d-flex align-items-center gap-2">
+                  <strong class="text-white fw-bold">EMAIL:</strong>
+                  <a
+                    href="mailto:info@akij.net"
+                    class="text-light-gray text-decoration-none opacity-75 hover-gold"
+                    >info@akij.net</a
                   >
-                  <a href="mailto:info@akij.net">info@akij.net</a>
-                </li>
-                <li class="pb-1 mb-2">
-                  <span
-                    class="d-block font-weight-normal line-height-1 text-color-light"
-                    >WORKING DAYS/HOURS</span
-                  >
-                  Sat - Thu / 9:00AM - 6:00PM
                 </li>
               </ul>
-              <ul
-                class="social-icons footer-social-icons social-icons-clean-with-border social-icons-medium">
-                <li class="social-icons-facebook">
-                  <a
-                    href="http://www.facebook.com/"
-                    class="no-footer-css"
-                    target="_blank"
-                    title="Facebook">
-                    <i class="fab fa-facebook-f"></i>
-                  </a>
-                </li>
-                <li class="social-icons-x mx-2">
-                  <a
-                    href="http://www.x.com/"
-                    class="no-footer-css"
-                    target="_blank"
-                    title="X">
-                    <i class="fab fa-x-twitter"></i>
-                  </a>
-                </li>
-                <li class="social-icons-linkedin">
-                  <a
-                    href="http://www.linkedin.com/"
-                    class="no-footer-css"
-                    target="_blank"
-                    title="Linkedin">
-                    <i class="fab fa-linkedin-in"></i>
-                  </a>
-                </li>
-              </ul>
+
+              <h6 class="text-gold fw-bold mb-2 fs-7 mt-2">Social</h6>
+              <div class="d-flex gap-3 social-links">
+                <a
+                  href="http://www.facebook.com/"
+                  target="_blank"
+                  title="Facebook"
+                  ><i class="fab fa-facebook-f"></i
+                ></a>
+                <a href="http://www.x.com/" target="_blank" title="X"
+                  ><i class="fab fa-x-twitter"></i
+                ></a>
+                <a
+                  href="http://www.linkedin.com/"
+                  target="_blank"
+                  title="Linkedin"
+                  ><i class="fab fa-linkedin-in"></i
+                ></a>
+              </div>
             </div>
           </div>
-        </div>
 
-        <!-- Copyright -->
-        <div class="container">
-          <div class="footer-copyright footer-copyright-style-2 pt-4 pb-5">
-            <div class="row">
-              <div class="col-12 text-center">
-                <p class="mb-0">&copy; 2026 Akij Group. All Rights Reserved.</p>
-              </div>
+          <!-- Copyright Bar -->
+          <div
+            class="row align-items-center border-top border-opacity-25 pt-3 mt-4 fs-7 text-light-gray">
+            <div class="col-12 text-center text-md-start opacity-75">
+              &copy; 2026 Akij Group .
+            </div>
+          </div>
+
+          <!-- Watermark -->
+          <div class="row align-items-center">
+            <div class="col-12 p-0">
+              <div class="footer-giant-watermark">AKIJ GROUP</div>
             </div>
           </div>
         </div>
@@ -2252,29 +2188,23 @@
       document.addEventListener("DOMContentLoaded", function () {
         var careerSwiper = new Swiper(".careerSwiper", {
           slidesPerView: 1,
-          spaceBetween: 24,
-          loop: true,
-          autoplay: {
-            delay: 4000,
-            disableOnInteraction: false,
+          spaceBetween: 20,
+          navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
           },
           pagination: {
             el: ".swiper-pagination",
             clickable: true,
           },
-          navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
-          },
           breakpoints: {
-            576: {
-              slidesPerView: 1,
-            },
             768: {
               slidesPerView: 2,
+              spaceBetween: 20,
             },
             992: {
               slidesPerView: 3,
+              spaceBetween: 24,
             },
           },
         });
