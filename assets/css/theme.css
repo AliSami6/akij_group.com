@@ -15810,7 +15810,7 @@ html body .rounded-circle {
 }
 
 #footer a:not(.btn):not(.no-footer-css) {
-	color: var(--default);
+	color: var(--light-300);
 	transition: all 0.1s ease-in-out;
 }
 
