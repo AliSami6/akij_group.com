@@ -433,7 +433,86 @@
   transform: translateY(0);
 }
 
+/* =================================================== */
+/* Mobile & Tablet Responsive Styles (768px or lower)  */
+/* =================================================== */
 
+@media screen and (max-width: 768px) {
+  /* 1. Reduce container padding and margins */
+  .timeline-container {
+    padding: 20px 10px;
+    margin: 20px auto;
+  }
+
+  /* 2. Shift center lines to the left side */
+  .timeline::before,
+  .timeline::after {
+    left: 20px !important;
+    transform: none !important;
+  }
+
+  /* 3. Convert all items to a single-column layout */
+  .timeline-item {
+    width: 100% !important;
+    padding-left: 50px !important;
+    padding-right: 0 !important;
+    margin-bottom: 25px;
+  }
+
+  .timeline-item.left,
+  .timeline-item.right {
+    left: 0 !important;
+    text-align: left !important;
+  }
+
+  /* 4. Align diamond dots to the left timeline track */
+  .timeline-item.left .timeline-dot,
+  .timeline-item.right .timeline-dot {
+    left: 14px !important;
+    right: auto !important;
+    top: 24px;
+  }
+
+  /* 5. Hide external timeline dates on mobile (cards include year-tag) */
+  .timeline-date {
+    display: none !important;
+  }
+
+  /* 6. Point card arrows toward the left line */
+  .timeline-content::before {
+    top: 22px !important;
+  }
+
+  .timeline-item.left .timeline-content::before,
+  .timeline-item.right .timeline-content::before {
+    left: -10px !important;
+    right: auto !important;
+    border-width: 8px 10px 8px 0 !important;
+    border-color: transparent #f0cb5d transparent transparent !important;
+  }
+
+  /* 7. Normalize header text alignment for left-side items */
+  .timeline-item.left .timeline-header-wrap {
+    flex-direction: row !important;
+  }
+
+  /* 8. Fine-tune typography for smaller screens */
+  .header-text h3 {
+    font-size: 16px;
+  }
+
+  .timeline-body p {
+    font-size: 13px;
+  }
+
+  /* 9. Align Start/End badges directly over the left line */
+  .timeline-start {
+    margin: 0 !important;
+    margin-left: 2px !important;
+    margin-bottom: 15px !important;
+    display: inline-block !important;
+  }
+}
 /* ==========================================
    2. MOBILE RESPONSIVE FIX (Max-width: 768px)
    ========================================== */
