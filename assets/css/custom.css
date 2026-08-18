@@ -8,9 +8,16 @@
   --color-gold: #e5c158;
   --text-muted-gray: #a6adbb;
   --primary-navy: #1a2b4c;
-  --primary-gold: #e5c158;
+  --text-primary-gold: #e5c158;
   --text-dark: #22252a;
   --bg-counter: #efefeb;
+  --primary-gold: #D4AF37;
+  --dark-charcoal: #1A1A1A;
+  --gold-primary: #c5a059;
+  --gold-light: #fef9ed;
+  --gold-dark: #8c6d2d;
+    --dark-primary-gold: #c19b53;
+  --dark-charcoal: #1a1a1a;
 }
 
 .owl-carousel .owl-nav .owl-prev,
@@ -1251,7 +1258,7 @@ ul.footer-social-icons.social-icons li a:hover i {
 
 .featured-news-card:hover .read-more-link {
   gap: 10px !important;
-  color: var(--primary-gold) !important;
+  color: var(--dark-primary-gold) !important;
 }
 
 /* Right Side News List */
@@ -1336,12 +1343,7 @@ ul.footer-social-icons.social-icons li a:hover i {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-/* Color Palette Variables */
-:root {
-  --gold-primary: #c5a059;
-  --gold-light: #fef9ed;
-  --gold-dark: #8c6d2d;
-}
+
 
 /* --- FOUNDER SECTION STYLES --- */
 .founder-card-wrapper {
@@ -1885,4 +1887,100 @@ ul.footer-social-icons.social-icons li a:hover i {
   .v2-timeline-layout .timeline-start {
     margin: 0 0 0 0;
   }
+}
+
+/* Card Box Shadow & Border Styling */
+.custom-box-shadow-1 {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease-in-out;
+  background-color: #ffffff;
+}
+
+.custom-box-shadow-1:hover {
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+/* Color Accents */
+.text-color-primary {
+  color: #c19b53 !important; /* Gold/brown shade from the image */
+}
+
+.text-color-dark {
+  color: #222222 !important;
+}
+
+/* Font Styles */
+h2 em {
+  font-family: Georgia, serif;
+  font-style: italic;
+  font-weight: 500;
+}
+
+.custom-font-secondary {
+  font-family: Georgia, serif;
+}
+
+
+/* Card Box Shadow & Border Styling */
+.custom-box-shadow-1 {
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease-in-out;
+  background-color: #ffffff;
+  border-radius: 6px;
+}
+
+.custom-box-shadow-1:hover {
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.text-primary-gold {
+  color: var(--text-primary-gold) !important;
+}
+
+.text-dark-charcoal {
+  color: var(--dark-charcoal) !important;
+}
+
+.letter-spacing-1 {
+  letter-spacing: 1px;
+}
+
+/* Icon Box Animation */
+.icon-box i {
+  transition: transform 0.25s ease-in-out;
+}
+
+.icon-box:hover i {
+  transform: translateY(-5px);
+}
+
+/* Accordion Premium Styling */
+.accordion-custom .card {
+  border: 1px solid #f0f0f0 !important;
+  overflow: hidden;
+}
+
+.accordion-custom .accordion-toggle {
+  color: var(--dark-charcoal);
+  font-size: 1.05rem;
+  transition: color 0.2s ease-in-out;
+}
+
+.accordion-custom .accordion-toggle:hover {
+  color: var(--primary-gold);
+}
+
+.accordion-custom .accordion-toggle .icon-toggle {
+  transition: transform 0.3s ease;
+}
+
+.accordion-custom .accordion-toggle:not(.collapsed) .icon-toggle {
+  transform: rotate(45deg); /* Plus turns into an X when open */
+}
+
+.accordion-custom .card-body {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: #555555 !important; /* Premium neutral dark grey instead of yellow gold */
+  padding: 0 1.75rem 1.5rem 1.75rem !important; /* Proper breathing space */
 }

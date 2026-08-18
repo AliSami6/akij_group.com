@@ -15775,7 +15775,7 @@ html body .rounded-circle {
 	background: var(--dark);
 	border-top: 4px solid var(--dark);
 	font-size: 0.9em;
-	margin-top: 50px;
+	margin-top:10px;
 	padding: 0;
 	position: relative;
 	clear: both;
