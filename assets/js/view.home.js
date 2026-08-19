@@ -1,7 +1,7 @@
 /*
 Name: 			View - Home
-Written by: 	Okler Themes - (http://www.okler.net)
-Theme Version:	13.1.0
+Written by: 	
+Theme Version:	1.1
 */
 
 (($ => {
@@ -128,72 +128,154 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  /* =========================================
-     5. MOBILE DROPDOWN
-  ========================================= */
+  
+});
 
-  const dropdownToggles = document.querySelectorAll(
-    "#HeaderMainNav .dropdown-toggle",
-  );
+/* =========================================
+   5. DROPDOWN - DESKTOP + MOBILE
+========================================= */
 
-  dropdownToggles.forEach(function (toggle) {
-    toggle.addEventListener("click", function (e) {
-      /* Only Mobile & Tablet */
+const dropdownToggles = document.querySelectorAll(
+  "#HeaderMainNav .dropdown-toggle"
+);
 
-      if (window.innerWidth <= 991) {
-        e.preventDefault();
-        e.stopPropagation();
+dropdownToggles.forEach(function (toggle) {
 
-        const parentDropdown = this.closest(".dropdown");
+  toggle.addEventListener("click", function (e) {
 
-        if (!parentDropdown) return;
+    e.preventDefault();
+    e.stopPropagation();
 
-        const dropdownMenu = parentDropdown.querySelector(".dropdown-menu");
+    const parentDropdown = this.closest(".dropdown");
 
-        /* Close Other Dropdowns */
+    if (!parentDropdown) return;
 
-        document
-          .querySelectorAll("#HeaderMainNav .dropdown")
-          .forEach(function (dropdown) {
-            if (dropdown !== parentDropdown) {
-              dropdown.classList.remove("show");
+    const dropdownMenu =
+      parentDropdown.querySelector(".dropdown-menu");
 
-              const otherMenu = dropdown.querySelector(".dropdown-menu");
+    /* =========================================
+       CLOSE OTHER DROPDOWNS
+    ========================================= */
 
-              if (otherMenu) {
-                otherMenu.classList.remove("show");
-              }
-            }
-          });
+    document
+      .querySelectorAll("#HeaderMainNav .dropdown")
+      .forEach(function (dropdown) {
 
-        /* Toggle Current Dropdown */
+        if (dropdown !== parentDropdown) {
 
-        parentDropdown.classList.toggle("show");
-
-        if (dropdownMenu) {
-          dropdownMenu.classList.toggle("show");
-        }
-      }
-    });
-  });
-
-  /* =========================================
-     6. CLOSE DROPDOWN ON DESKTOP RESIZE
-  ========================================= */
-
-  window.addEventListener("resize", function () {
-    if (window.innerWidth > 991) {
-      document
-        .querySelectorAll("#HeaderMainNav .dropdown")
-        .forEach(function (dropdown) {
           dropdown.classList.remove("show");
 
-          const menu = dropdown.querySelector(".dropdown-menu");
+          const otherMenu =
+            dropdown.querySelector(".dropdown-menu");
 
-          if (menu) {
-            menu.classList.remove("show");
+          if (otherMenu) {
+            otherMenu.classList.remove("show");
           }
-        });
+
+          const otherToggle =
+            dropdown.querySelector(".dropdown-toggle");
+
+          if (otherToggle) {
+            otherToggle.setAttribute(
+              "aria-expanded",
+              "false"
+            );
+          }
+
+        }
+
+      });
+
+    /* =========================================
+       TOGGLE CURRENT DROPDOWN
+    ========================================= */
+
+    parentDropdown.classList.toggle("show");
+
+    if (dropdownMenu) {
+      dropdownMenu.classList.toggle("show");
+
+      const isOpen =
+        dropdownMenu.classList.contains("show");
+
+      this.setAttribute(
+        "aria-expanded",
+        isOpen ? "true" : "false"
+      );
     }
+
   });
+
+});
+
+
+/* =========================================
+   6. CLICK OUTSIDE = CLOSE DROPDOWN
+========================================= */
+
+document.addEventListener("click", function (e) {
+
+  if (!e.target.closest("#HeaderMainNav .dropdown")) {
+
+    document
+      .querySelectorAll("#HeaderMainNav .dropdown")
+      .forEach(function (dropdown) {
+
+        dropdown.classList.remove("show");
+
+        const menu =
+          dropdown.querySelector(".dropdown-menu");
+
+        if (menu) {
+          menu.classList.remove("show");
+        }
+
+        const toggle =
+          dropdown.querySelector(".dropdown-toggle");
+
+        if (toggle) {
+          toggle.setAttribute(
+            "aria-expanded",
+            "false"
+          );
+        }
+
+      });
+
+  }
+
+});
+
+
+/* =========================================
+   7. WINDOW RESIZE
+========================================= */
+
+window.addEventListener("resize", function () {
+
+  document
+    .querySelectorAll("#HeaderMainNav .dropdown")
+    .forEach(function (dropdown) {
+
+      dropdown.classList.remove("show");
+
+      const menu =
+        dropdown.querySelector(".dropdown-menu");
+
+      if (menu) {
+        menu.classList.remove("show");
+      }
+
+      const toggle =
+        dropdown.querySelector(".dropdown-toggle");
+
+      if (toggle) {
+        toggle.setAttribute(
+          "aria-expanded",
+          "false"
+        );
+      }
+
+    });
+
 });

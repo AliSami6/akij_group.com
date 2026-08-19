@@ -600,43 +600,53 @@
                           src="assets/img/generic/generic-corporate-3-3-full.jpg" />
                       </div>
                     </div>
-
                     <div
                       class="toggle toggle-primary toggle-simple"
                       data-plugin-toggle>
-                      <section class="toggle active">
-                        <a class="toggle-titles">Our Benefits</a>
-                        <div class="toggle-content">
-                          <p>
-                            We offer competitive compensation packages, health
-                            insurance, provident funds, performance bonuses, and
-                            career development programs tailored to accelerate
-                            your professional roadmap.
-                          </p>
-                        </div>
-                      </section>
-                      <section class="toggle">
-                        <a class="toggle-titles">Our Culture</a>
-                        <div class="toggle-content">
-                          <p>
-                            Built on a foundation of mutual trust and respect,
-                            Akij Group promotes collaboration, ethical
-                            practices, diversity, and continuous learning in a
-                            modern work environment.
-                          </p>
-                        </div>
-                      </section>
-                      <section class="toggle">
-                        <a class="toggle-titles">Join Our Team</a>
-                        <div class="toggle-content">
-                          <p>
-                            If you are passionate about building meaningful
-                            products and want to grow alongside Bangladesh's
-                            leading industrial pioneer, apply today to start
-                            your journey with us.
-                          </p>
-                        </div>
-                      </section>
+                        <section class="toggle active">
+                          <a class="toggle-titles">
+                            <i class="fas fa-gift me-2 text-primary"></i> Our
+                            Benefits
+                          </a>
+                          <div class="toggle-content">
+                            <p>
+                              We offer competitive compensation packages, health
+                              insurance, provident funds, performance bonuses, and
+                              career development programs tailored to accelerate
+                              your professional roadmap.
+                            </p>
+                          </div>
+                        </section>
+
+                        <section class="toggle">
+                          <a class="toggle-titles">
+                            <i class="fas fa-users-cog me-2 text-primary"></i> Our
+                            Culture
+                          </a>
+                          <div class="toggle-content">
+                            <p>
+                              Built on a foundation of mutual trust and respect,
+                              Akij Group promotes collaboration, ethical
+                              practices, diversity, and continuous learning in a
+                              modern work environment.
+                            </p>
+                          </div>
+                        </section>
+
+                        <section class="toggle">
+                          <a class="toggle-titles">
+                            <i class="fas fa-user-plus me-2 text-primary"></i>
+                            Join Our Team
+                          </a>
+                          <div class="toggle-content">
+                            <p>
+                              If you are passionate about building meaningful
+                              products and want to grow alongside Bangladesh's
+                              leading industrial pioneer, apply today to start
+                              your journey with us.
+                            </p>
+                          </div>
+                        </section>
                     </div>
                   </div>
                 </div>
@@ -883,155 +893,10 @@
 
     <!-- Circle Flip Slideshow Script -->
     <script src="assets/js/jquery.flipshow.min.js"></script>
+    <!-- bootstrap bundle -->
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
     <!-- Current Page Views -->
     <script src="assets/js/view.home.js"></script>
 
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const timeline = document.querySelector(".timeline");
-
-        // 1. Scroll-driven Middle Line Animation
-        function updateTimelineLine() {
-          if (!timeline) return;
-
-          const rect = timeline.getBoundingClientRect();
-          const drawPoint = window.innerHeight / 1.2;
-          let currentHeight = drawPoint - rect.top;
-
-          if (currentHeight < 0) currentHeight = 0;
-          if (currentHeight > rect.height) currentHeight = rect.height;
-
-          timeline.style.setProperty("--line-height", `${currentHeight}px`);
-        }
-
-        window.addEventListener("scroll", updateTimelineLine);
-        window.addEventListener("resize", updateTimelineLine);
-        updateTimelineLine();
-
-        // 2. Step-by-Step Reveal Observer (Line -> Diamond Dot & Date -> Content Card)
-        const timelineItems = document.querySelectorAll(".timeline-item");
-
-        const observerOptions = {
-          root: null,
-          threshold: 0.25,
-        };
-
-        const observer = new IntersectionObserver((entries, observer) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              entry.target.classList.add("show");
-              observer.unobserve(entry.target);
-            }
-          });
-        }, observerOptions);
-
-        timelineItems.forEach((item) => {
-          observer.observe(item);
-        });
-      });
-    </script>
-    <!-- Swiper JS CDN -->
-    <script src="assets/js/swiper-bundle.min.js"></script>
-    <script>
-      var newsSwiper = new Swiper(".newsSwiper", {
-        slidesPerView: 1,
-        spaceBetween: 24,
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
-        },
-        breakpoints: {
-          // Small screens (mobile landscape / small tablets)
-          576: {
-            slidesPerView: 2,
-            spaceBetween: 20,
-          },
-
-          992: {
-            slidesPerView: 3,
-            spaceBetween: 30,
-          },
-        },
-      });
-
-      document.addEventListener("DOMContentLoaded", function () {
-        var careerSwiper = new Swiper(".careerSwiper", {
-          slidesPerView: 1,
-          spaceBetween: 24,
-          loop: true,
-          autoplay: {
-            delay: 4000,
-            disableOnInteraction: false,
-          },
-          pagination: {
-            el: ".swiper-pagination",
-            clickable: true,
-          },
-          navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
-          },
-          breakpoints: {
-            576: {
-              slidesPerView: 1,
-            },
-            768: {
-              slidesPerView: 2,
-            },
-            992: {
-              slidesPerView: 3,
-            },
-          },
-        });
-      });
-
-      document.addEventListener("DOMContentLoaded", function () {
-        const slider = document.getElementById("newsSlider");
-        const slides = document.querySelectorAll(".custom-slide-item");
-        const totalSlides = slides.length;
-
-        let currentIndex = 0;
-        let autoSlideTimer = null;
-        function getVisibleSlides() {
-          if (window.innerWidth >= 992) return 3;
-          if (window.innerWidth >= 768) return 2;
-          return 1;
-        }
-
-        function moveSlider() {
-          const visibleSlides = getVisibleSlides();
-          const maxIndex = totalSlides - visibleSlides;
-
-          if (currentIndex > maxIndex) {
-            currentIndex = 0;
-          }
-
-          const percentage = -(currentIndex * (100 / visibleSlides));
-          slider.style.transform = `translateX(${percentage}%)`;
-        }
-
-        function startAutoSlide() {
-          stopAutoSlide();
-          autoSlideTimer = setInterval(() => {
-            currentIndex++;
-            moveSlider();
-          }, 3000); // 3000ms = 3 Seconds
-        }
-
-        function stopAutoSlide() {
-          if (autoSlideTimer) clearInterval(autoSlideTimer);
-        }
-
-        slider.addEventListener("mouseenter", stopAutoSlide);
-        slider.addEventListener("mouseleave", startAutoSlide);
-
-        window.addEventListener("resize", () => {
-          currentIndex = 0;
-          moveSlider();
-        });
-
-        startAutoSlide();
-      });
-    </script>
   </body>
 </html>
