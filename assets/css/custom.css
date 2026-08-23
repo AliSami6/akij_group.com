@@ -1035,7 +1035,7 @@ ul.footer-social-icons.social-icons li a:hover i {
 #header.header-scrolled .navbar-brand img {
   height: 45px;
   width: auto;
-
+  margin-top: 5px;
 }
 
 /*  Nav Links & Font Style (Default State: Text Light & No Underline) */
@@ -1063,21 +1063,28 @@ ul.footer-social-icons.social-icons li a:hover i {
 }
 
 .navbar-toggler {
-    padding: var(--bs-navbar-toggler-padding-y) var(--bs-navbar-toggler-padding-x);
-    font-size: var(--bs-navbar-toggler-font-size);
+    padding: 4px 8px;
+    font-size: 0.85rem;
     line-height: 1;
-    color: #fff;
-    background-color: #eee;
-    border: var(--bs-border-width) solid var(--bs-navbar-toggler-border-color);
-    border-radius: var(--bs-navbar-toggler-border-radius);
-    transition: var(--bs-navbar-toggler-transition);
+    color: #000;
+    background-color: #f9f4f4;
+    border: 1px solid rgba(107, 102, 102, 0.3);
+    border-radius:4px ;
+    outline: none;
+    box-shadow: none;
 }
 /* Active Menu Color */
 #HeaderMainNav .nav-link.active {
   color: #c59b27 !important;
   font-weight: 600;
 }
-
+.navbar-toggler.custom-toggler .navbar-toggler-icon {
+    width: 1.2rem; 
+    height: 1.2rem; 
+}
+.navbar-toggler:focus {
+    box-shadow: none;
+}
 
 #HeaderMainNav .dropdown-item.active,
 #HeaderMainNav .dropdown-item:active {
