@@ -1022,7 +1022,7 @@ ul.footer-social-icons.social-icons li a:hover i {
 
 }
 
-/* ২. Scrolled Sticky Header  */
+/* . Scrolled Sticky Header  */
 #header.header-scrolled {
   position: fixed !important;
   top: 0;
@@ -1040,7 +1040,7 @@ ul.footer-social-icons.social-icons li a:hover i {
 
 /*  Nav Links & Font Style (Default State: Text Light & No Underline) */
 #header .nav-item .nav-link {
-  color: #ffffff !important; 
+  color: #fff !important; 
   font-weight: 700;
   font-size: 12px !important;
   text-transform: uppercase;
@@ -1057,7 +1057,7 @@ ul.footer-social-icons.social-icons li a:hover i {
   text-decoration: none !important;
 }
 
-/* . Bootstrap Double Arrow Hide */
+/*  Bootstrap Double Arrow Hide */
 .dropdown-toggle::after {
   display: none !important;
 }
