@@ -2409,7 +2409,6 @@ h2 em {
 /* Right Overlapping Image */
 .right-image-box {
   width: 52%;
-  height: 380px;
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 15px 30px rgba(0,0,0,0.12);
@@ -2450,12 +2449,12 @@ h2 em {
 }
 
 .brand-title h2 {
-  font-size: 2rem;
-  font-weight: 800;
-  color: #c5a059;
-  line-height: 1;
-  margin: 0;
-  letter-spacing: 1px;
+    font-size: 2rem;
+    font-weight: 800;
+    color: #c5a059;
+    line-height: 1;
+    margin: 0;
+    letter-spacing: 1px;
 }
 
 .brand-title span {
