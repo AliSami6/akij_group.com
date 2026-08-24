@@ -1033,9 +1033,9 @@ ul.footer-social-icons.social-icons li a:hover i {
 }
 
 #header.header-scrolled .navbar-brand img {
-  height: 45px;
+  height:50px;
   width: auto;
-  margin-top: 5px;
+  margin-top:0px;
 }
 
 /*  Nav Links & Font Style (Default State: Text Light & No Underline) */
@@ -1432,16 +1432,26 @@ ul.footer-social-icons.social-icons li a:hover i {
     }
 }
 
+/* =========================================
+   MOBILE RESPONSIVE FIX
+========================================= */
 @media (max-width: 480px) {
 
+  
     .footer-brand-column,
-    .footer-links-column,
     .footer-contact-column {
         width: 100%;
     }
 
+   
+    .footer-links-column {
+        width: 50% !important;
+        flex: 0 0 50% !important;
+        max-width: 50% !important;
+    }
+
     .footer-giant-watermark {
-        font-size: 48px;
+        font-size: 42px;
         letter-spacing: -2px;
     }
 }
@@ -2245,50 +2255,149 @@ h2 em {
 .copywrite{
   font-size: 11px !important;
 }
-
-/* --- AKIJ ABOUT SECTION STYLES --- */
-.akij-about-section {
-  padding: 80px 0;
-  background-color: #fbfbfb;
-  position: relative;
-  overflow: hidden;
+/* Color Variables & Section Base */
+:root {
+  --akij-gold: #c29953;
+  --akij-bg-light: #f7f7f7;
 }
 
-/* Image Grid Wrapper */
+.akij-about-section {
+  background-color: var(--akij-bg-light);
+  padding: 80px 0;
+  position: relative;
+}
+
+/* Image Grid Styling */
 .akij-image-grid-wrapper {
   position: relative;
   display: flex;
-  gap: 15px;
   align-items: center;
-  max-width: 540px;
+  max-width: 500px;
   margin: 0 auto;
 }
 
-/* Left Stack (Top & Bottom Images) */
+/* Dot Patterns */
+.dot-pattern {
+  position: absolute;
+  width: 90px;
+  height: 50px;
+  background-image: radial-gradient(var(--akij-gold) 2px, transparent 2px);
+  background-size: 10px 10px;
+  opacity: 0.5;
+  z-index: 0;
+}
+.dot-pattern-top {
+  top: -25px;
+  left: 35%;
+}
+.dot-pattern-bottom {
+  bottom: -25px;
+  left: 20%;
+}
+
+/* Image Containers with White Border */
 .left-image-stack {
+  width: 48%;
   display: flex;
   flex-direction: column;
   gap: 15px;
-  width: 52%;
   z-index: 1;
 }
 
 .img-box {
-  width: 100%;
+  background: #fff;
+  padding: 5px;
   border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-  border: 4px solid #ffffff;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
 }
 
-.img-box img, 
-.right-image-box img {
+.img-box img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  border-radius: 5px;
   display: block;
 }
 
+.right-image-box {
+  width: 58%;
+  margin-left: -12%;
+  z-index: 2;
+  background: #fff;
+  padding: 6px;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+}
+
+.right-image-box img {
+  width: 100%;
+  border-radius: 6px;
+  display: block;
+}
+
+/* Content Styling */
+.brand-header-box {
+  border-left: 2px solid #ccc;
+  padding-left: 15px;
+}
+
+.brand-title-text {
+  color: var(--akij-gold);
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.desc-text {
+  color: #555;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.accent-line-gold {
+  width: 50px;
+  height: 3px;
+  background-color: var(--akij-gold);
+  border: none;
+  opacity: 1;
+}
+
+/* Legacy / Years Section */
+.legacy-circle-icon {
+  width: 60px;
+  height: 60px;
+  border: 2px solid var(--akij-gold);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--akij-gold);
+  font-size: 24px;
+  flex-shrink: 0;
+}
+
+.years-number {
+  color: var(--akij-gold);
+  font-size: 42px;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.years-unit {
+  color: var(--akij-gold);
+  font-size: 28px;
+  font-weight: 700;
+}
+
+/* Responsive Fix */
+@media (max-width: 575px) {
+  .akij-image-grid-wrapper {
+    flex-direction: column;
+    gap: 15px;
+  }
+  .left-image-stack,
+  .right-image-box {
+    width: 100%;
+    margin-left: 0;
+  }
+}
 .top-left {
   height: 200px;
 }
@@ -2358,8 +2467,8 @@ h2 em {
 
 .desc-text {
   color: #4a4a4a;
-  font-size: 1.05rem;
-  line-height: 1.7;
+  font-size: 14px;
+  line-height: 1.5;
 }
 
 .accent-line {
@@ -2565,3 +2674,19 @@ h2 em {
   font-size: 0.95rem;
   line-height: 1.6;
 }
+.breadcrumb i{
+  font-size: 11px;
+}
+
+.lead {
+  font-size: 14px;
+  padding: 8px;
+  font-family: cursive;
+}
+
+#header.header-scrolled .navbar-brand img {
+  height: 36px;
+  width: auto;
+  margin-top: 4px;
+}
+

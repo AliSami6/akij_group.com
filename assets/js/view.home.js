@@ -279,3 +279,50 @@ window.addEventListener("resize", function () {
     });
 
 });
+document.addEventListener("DOMContentLoaded", function () {
+  const menuCollapse = document.getElementById("navbarNavDropdown");
+  const overlay = document.querySelector(".sidebar-overlay");
+  const closeBtn = document.querySelector(".sidebar-close-btn");
+
+  if (!menuCollapse) return;
+
+  // Initialize Bootstrap Collapse instance
+  const bsCollapse = new bootstrap.Collapse(menuCollapse, {
+    toggle: false,
+  });
+
+  // Toggle overlay active state when menu slides in/out
+  menuCollapse.addEventListener("show.bs.collapse", function () {
+    if (overlay) overlay.classList.add("active");
+  });
+
+  menuCollapse.addEventListener("hide.bs.collapse", function () {
+    if (overlay) overlay.classList.remove("active");
+  });
+
+  // Explicit Close Actions
+  if (closeBtn) {
+    closeBtn.addEventListener("click", function () {
+      bsCollapse.hide();
+    });
+  }
+
+  if (overlay) {
+    overlay.addEventListener("click", function () {
+      bsCollapse.hide();
+    });
+  }
+});
+document.addEventListener("DOMContentLoaded", function () {
+  const closeBtn = document.getElementById("closeMenuBtn");
+  const navDropdown = document.getElementById("navbarNavDropdown");
+
+  if (closeBtn && navDropdown) {
+    closeBtn.addEventListener("click", function () {
+      const bsCollapse =
+        bootstrap.Collapse.getInstance(navDropdown) ||
+        new bootstrap.Collapse(navDropdown);
+      bsCollapse.hide();
+    });
+  }
+});

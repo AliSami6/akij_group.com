@@ -1,3 +1,6 @@
+
+
+/* 1281px and higher (Large Desktops) */
 @media (min-width: 1281px) {
   #header .container-fluid {
     max-width: 1440px;
@@ -10,12 +13,11 @@
   }
   .lead {
     font-size: 16px;
-    padding:8px;
-    font-family: cursive;
   }
 }
 
-@media (min-width: 1025px) and (max-width: 1280px) {
+/* 1025px to 1280px (Laptops / Small Desktops) */
+@media (min-width: 1025px) and (max-width: 1280.98px) {
   #header .container-fluid {
     padding-left: 2rem;
     padding-right: 2rem;
@@ -25,14 +27,10 @@
     padding-left: 1rem;
     padding-right: 1rem;
   }
-  .lead {
-    font-size: 14px;
-    padding:8px;
-    font-family: cursive;
-  }
 }
 
-@media (min-width: 768px) and (max-width: 1024px) {
+/* 768px to 1024px (Tablets - Portrait & General) */
+@media (min-width: 768px) and (max-width: 1024.98px) {
   #header .navbar-brand img {
     width: 90px;
     height: 45px;
@@ -59,14 +57,13 @@
     width: 1px;
     background: rgba(0, 0, 0, 0.12);
   }
-      .lead {
+  .lead {
     font-size: 16px;
-    padding:8px;
-    font-family: cursive;
   }
 }
 
-@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+/* 768px to 1024px (Tablets - Landscape Specific) */
+@media (min-width: 768px) and (max-width: 1024.98px) and (orientation: landscape) {
   #navbarNavDropdown {
     max-height: 70vh;
     overflow-y: auto;
@@ -75,45 +72,33 @@
     padding: 20px 10px;
     margin: 20px auto;
   }
-
-  /* Move Vertical Lines to the Left */
   .timeline::after,
   .timeline::before {
     left: 20px;
     transform: none;
   }
-
-  /* Items Take Full Width to the Right */
   .timeline-item {
     width: 100% !important;
     padding-left: 55px !important;
     padding-right: 10px !important;
     margin-bottom: 30px;
   }
-
   .timeline-item.left,
   .timeline-item.right {
     left: 0 !important;
     text-align: left !important;
   }
-
   .timeline-item.left .timeline-header-wrap {
     flex-direction: row !important;
   }
-
-  /* Align Dots with Left Line */
   .timeline-item.left .timeline-dot,
   .timeline-item.right .timeline-dot {
     left: 13px !important;
     right: auto !important;
   }
-
-  /* Hide Outer Dates on Mobile (Year Tag Inside Card is Used) */
   .timeline-date {
     display: none !important;
   }
-
-  /* Adjust Pointer Arrow for All Left Items */
   .timeline-item.left .timeline-content::before,
   .timeline-item.right .timeline-content::before {
     left: -10px !important;
@@ -121,22 +106,17 @@
     border-width: 8px 10px 8px 0 !important;
     border-color: transparent #f0cb5d transparent transparent !important;
   }
-
   .timeline-content:hover {
-    transform: none !important; /* Touch screen hover fix */
+    transform: none !important;
   }
   .custom-slide-item {
     flex: 0 0 50%;
     max-width: 50%;
   }
-      .lead {
-    font-size: 16px;
-    padding:8px;
-    font-family: cursive;
-  }
 }
 
-@media (min-width: 481px) and (max-width: 767px) {
+/* 481px to 767px (Large Phones / Phablets) */
+@media (min-width: 481px) and (max-width: 767.98px) {
   #header .container-fluid {
     padding-left: 1rem;
     padding-right: 1rem;
@@ -162,53 +142,15 @@
   .counter-label {
     font-size: 0.775rem;
   }
-
-  #home h2.text-12 {
-    font-size: 26px !important;
-    line-height: 1.2 !important;
-    word-break: break-word;
-  }
-
-  /* Subtitle (STRENGTH YOU CAN TRUST) */
-  #home h3.text-5 {
-    font-size: 14px !important;
-    line-height: 1.3 !important;
-    padding-left: 10px !important;
-    padding-right: 10px !important;
-  }
-
-  /* Side Borders of Subtitle */
-  #home h3.text-5 img {
-    height: 10px !important;
-    width: auto !important;
-  }
-
-  /* Description Paragraph */
-  #home p.text-4 {
-    font-size: 13px !important;
-    line-height: 1.5 !important;
-    padding: 0 10px;
-  }
-
-  /* Navigation Arrows Adjustments */
-  #home .owl-nav button.owl-prev,
-  #home .owl-nav button.owl-next {
-    width: 32px !important;
-    height: 32px !important;
-    line-height: 32px !important;
-  }
   #home .container {
     padding-left: 15px !important;
     padding-right: 15px !important;
     width: 100% !important;
   }
-
   #home .col-lg-8 {
     padding-left: 0 !important;
     padding-right: 0 !important;
   }
-
-  /* Main Title Fix */
   #home h2.text-12 {
     font-size: 20px !important;
     line-height: 1.3 !important;
@@ -216,28 +158,20 @@
     margin-bottom: 10px !important;
     word-break: normal !important;
   }
-
-  /* Subtitle Fix */
   #home h3.text-5 {
     font-size: 11px !important;
     line-height: 1.4 !important;
     padding-left: 0 !important;
     padding-right: 0 !important;
   }
-
-  /* Title Border Images Hide for Mobile */
   #home h3.text-5 img {
     display: none !important;
   }
-
-  /* Description Paragraph Fix */
   #home p.text-4 {
     font-size: 12px !important;
     line-height: 1.5 !important;
     padding: 0 5px !important;
   }
-
-  /* Navigation Arrows */
   #home .owl-nav {
     position: absolute;
     top: 50%;
@@ -245,7 +179,6 @@
     transform: translateY(-50%);
     pointer-events: none;
   }
-
   #home .owl-nav button.owl-prev,
   #home .owl-nav button.owl-next {
     pointer-events: auto;
@@ -255,11 +188,9 @@
     background: rgba(0, 0, 0, 0.3) !important;
     border-radius: 50% !important;
   }
-
   #home .owl-nav button.owl-prev {
     left: 5px !important;
   }
-
   #home .owl-nav button.owl-next {
     right: 5px !important;
   }
@@ -269,7 +200,6 @@
   .custom-img-caption p {
     font-size: 11px !important;
   }
-
   .golden-three-circles {
     width: 120px;
     height: 120px;
@@ -281,21 +211,17 @@
     width: 200px;
     height: 200px;
   }
-    .lead {
-    font-size: 16px;
-    padding:8px;
-    font-family: cursive;
-  }
 }
 
-@media (min-width: 320px) and (max-width: 480px) {
-  #header .container-fluid {
+/* 320px to 480px (Small Mobile Devices) */
+@media (max-width: 480.98px) {
+  #header {
     padding-left: 0.75rem;
     padding-right: 0.75rem;
   }
   #header .navbar-brand img {
-    width: 75px;
-    height: 38px;
+    height: 36px;
+    width: auto;
   }
   #navbarNavDropdown {
     padding: 0.75rem;
@@ -311,11 +237,9 @@
   #home h2.text-12 {
     font-size: 22px !important;
   }
-
   #home h3.text-5 {
     font-size: 12px !important;
   }
-
   #home p.text-4 {
     font-size: 12px !important;
   }
@@ -324,7 +248,6 @@
     padding: 2px 0 !important;
     background-color: transparent !important;
   }
-
   .dropdown-item {
     display: inline-block !important;
     width: auto !important;
@@ -334,8 +257,26 @@
     background-color: #ffffff !important;
   }
   .lead {
-    font-size: 14px;
     padding: 5px;
-    font-family: cursive;
+  }
+}
+
+/* Mobile Toggle & Close Button Fix */
+@media (max-width: 991.98px) {
+  .navbar-toggler:not(.collapsed) {
+    display: none !important;
+  }
+  .header-close-btn {
+    position: absolute;
+    top: -36px;
+    right: 12px;
+    z-index: 1055;
+    background-size: 14px;
+    opacity: 1;
+    cursor: pointer;
+  }
+  .collapse:not(.show) + .header-close-btn,
+  .collapse:not(.show) .header-close-btn {
+    display: none !important;
   }
 }

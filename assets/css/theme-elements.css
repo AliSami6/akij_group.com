@@ -1,8 +1,7 @@
 @charset "UTF-8";
 /*
 Name: 			theme-elements.css
-Written by: 	Okler Themes - (http://www.okler.net)
-Theme Version:	13.1.0
+
 */
 /* Accordion */
 .accordion .card {
@@ -54,6 +53,9 @@ Theme Version:	13.1.0
 	margin-right: 5px;
 	position: relative;
 	top: -1px;
+}
+.accordion .card-header a [class*="fa-"], .accordion .card-header a .icons:hover{
+	color: var();
 }
 
 .accordion .card-header a .icons {
@@ -245,6 +247,9 @@ Theme Version:	13.1.0
 .accordion-modern-status-primary.accordion-modern-status > .card .card-header a:not(.collapsed) {
 	background-color: var(--primary) !important;
 	color: var(--primary-inverse) !important;
+}
+.accordion.accordion-modern-status > .card .card-header i {
+  color:#555 !important;
 }
 
 .accordion-modern-status-primary.accordion-modern-status > .card:hover .card-header a.collapsed {
@@ -20991,7 +20996,7 @@ blockquote.blockquote-reverse {
 
 /* Small */
 small, .small {
-	font-size: 70%;
+	font-size: 80%;
 }
 
 /* Paragraphs */
@@ -21721,7 +21726,7 @@ section.video blockquote i.fa-quote-left {
 /* slide */
 .word-rotator.slide span {
 	display: inline-block;
-	padding: .2em 0;
+	padding: 0.19em 0;
 }
 
 .word-rotator.slide .word-rotator-words {
