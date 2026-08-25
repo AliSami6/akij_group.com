@@ -249,6 +249,7 @@
         font-size: 9px !important;
         padding: 5px 7px !important;
     }
+  
 
 }
 
@@ -310,6 +311,9 @@
   margin:3px;
   border-radius: 2px;
 }
+  .appear-animation-visible{
+      text-align: center;
+    }
 }
 
 /* Mobile Toggle & Close Button Fix */
