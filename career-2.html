@@ -163,7 +163,7 @@
         </nav>
       </header>
 
-       <div role="main" class="main">
+      <div role="main" class="main">
         <section
           class="page-header page-header-modern page-header-background page-header-background-md overlay overlay-color-dark overlay-show overlay-op-7"
           style="
@@ -406,7 +406,7 @@
             <div class="container py-4 px-3 px-sm-4">
               <div class="row pb-4 g-4">
                 <!-- Left Column: Current Openings Accordion -->
-                <div class="col-12 col-md-8">
+                <div class="col-12 col-sm-8 col-md-8">
                   <div
                     class="appear-animation"
                     data-appear-animation="fadeIn"
@@ -419,11 +419,10 @@
                     <div
                       class="accordion accordion-modern accordion-modern-grey-scale-1 without-bg mt-4"
                       id="accordion11">
-                      <!-- Job 1 -->
                       <div
                         class="card card-default mb-3 border-0 shadow-sm rounded">
                         <div class="card-header bg-light">
-                          <h4 class="card-title m-0">
+                          <h4 class="card-title m-0 py-2">
                             <a
                               class="accordion-toggle text-3 font-weight-bold text-decoration-none"
                               data-bs-toggle="collapse"
@@ -474,7 +473,7 @@
                       <div
                         class="card card-default mb-3 border-0 shadow-sm rounded">
                         <div class="card-header bg-light">
-                          <h4 class="card-title m-0">
+                          <h4 class="card-title m-0 py-2">
                             <a
                               class="accordion-toggle text-3 font-weight-bold text-decoration-none"
                               data-bs-toggle="collapse"
@@ -519,7 +518,7 @@
                       <div
                         class="card card-default mb-3 border-0 shadow-sm rounded">
                         <div class="card-header bg-light">
-                          <h4 class="card-title m-0">
+                          <h4 class="card-title m-0 py-2">
                             <a
                               class="accordion-toggle text-3 font-weight-bold text-decoration-none"
                               data-bs-toggle="collapse"
@@ -563,7 +562,7 @@
                       <div
                         class="card card-default mb-3 border-0 shadow-sm rounded">
                         <div class="card-header bg-light">
-                          <h4 class="card-title m-0">
+                          <h4 class="card-title m-0 py-2">
                             <a
                               class="accordion-toggle text-3 font-weight-bold text-decoration-none"
                               data-bs-toggle="collapse"
@@ -607,7 +606,7 @@
                       <div
                         class="card card-default mb-2 border-0 shadow-sm rounded">
                         <div class="card-header bg-light">
-                          <h4 class="card-title m-0">
+                          <h4 class="card-title m-0 py-2">
                             <a
                               class="accordion-toggle text-3 font-weight-bold text-decoration-none"
                               data-bs-toggle="collapse"
@@ -651,7 +650,7 @@
                 </div>
 
                 <!-- Right Column: Image Slider & Toggles -->
-                <div class="col-12 col-md-4 mt-4 mt-md-0">
+                <div class="col-12 col-sm-4 col-md-4 mt-4 mt-md-0">
                   <div
                     class="appear-animation"
                     data-appear-animation="fadeIn"
@@ -1005,6 +1004,30 @@
         });
 
         startAutoSlide();
+      });
+
+      document.addEventListener("DOMContentLoaded", function () {
+        const accordion = document.getElementById("accordion11");
+
+        if (!accordion) return;
+
+        const items = accordion.querySelectorAll(".collapse");
+
+        items.forEach(function (item) {
+          item.addEventListener("show.bs.collapse", function () {
+            items.forEach(function (otherItem) {
+              if (otherItem !== item) {
+                const bsCollapse =
+                  bootstrap.Collapse.getInstance(otherItem) ||
+                  new bootstrap.Collapse(otherItem, {
+                    toggle: false,
+                  });
+
+                bsCollapse.hide();
+              }
+            });
+          });
+        });
       });
     </script>
   </body>

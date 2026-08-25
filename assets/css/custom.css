@@ -371,7 +371,7 @@
 .list.list-icons li > .icons:first-child,
 .list.list-icons li a:first-child > [class*="fa-"]:first-child,
 .list.list-icons li a:first-child > .icons:first-child {
-  top: 1px !important;
+  top: 3px !important;
 }
 /* ==========================================
    1. BASE & DESKTOP STYLES (Min-width: 769px)
@@ -2897,4 +2897,9 @@ h2 em {
   .history-card {
     padding: 1.25rem 1rem !important;
   }
+  .list.list-icons li >i{
+    margin:1px !important;
+  }
+
 }
+

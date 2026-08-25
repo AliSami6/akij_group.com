@@ -423,7 +423,7 @@
                       <div
                         class="card card-default mb-3 border-0 shadow-sm rounded">
                         <div class="card-header bg-light">
-                          <h4 class="card-title m-0">
+                          <h4 class="card-title m-0 py-2">
                             <a
                               class="accordion-toggle text-3 font-weight-bold text-decoration-none"
                               data-bs-toggle="collapse"
@@ -474,7 +474,7 @@
                       <div
                         class="card card-default mb-3 border-0 shadow-sm rounded">
                         <div class="card-header bg-light">
-                          <h4 class="card-title m-0">
+                          <h4 class="card-title m-0 py-2">
                             <a
                               class="accordion-toggle text-3 font-weight-bold text-decoration-none"
                               data-bs-toggle="collapse"
@@ -519,7 +519,7 @@
                       <div
                         class="card card-default mb-3 border-0 shadow-sm rounded">
                         <div class="card-header bg-light">
-                          <h4 class="card-title m-0">
+                          <h4 class="card-title m-0 py-2">
                             <a
                               class="accordion-toggle text-3 font-weight-bold text-decoration-none"
                               data-bs-toggle="collapse"
@@ -563,7 +563,7 @@
                       <div
                         class="card card-default mb-3 border-0 shadow-sm rounded">
                         <div class="card-header bg-light">
-                          <h4 class="card-title m-0">
+                          <h4 class="card-title m-0 py-2">
                             <a
                               class="accordion-toggle text-3 font-weight-bold text-decoration-none"
                               data-bs-toggle="collapse"
@@ -607,7 +607,7 @@
                       <div
                         class="card card-default mb-2 border-0 shadow-sm rounded">
                         <div class="card-header bg-light">
-                          <h4 class="card-title m-0">
+                          <h4 class="card-title m-0 py-2">
                             <a
                               class="accordion-toggle text-3 font-weight-bold text-decoration-none"
                               data-bs-toggle="collapse"
@@ -983,5 +983,30 @@
     <script src="assets/js/bootstrap.bundle.min.js"></script>
     <!-- Current Page Views -->
     <script src="assets/js/view.home.js"></script>
+    <script type="text/javascript">
+        document.addEventListener("DOMContentLoaded", function () {
+        const accordion = document.getElementById("accordion11");
+
+        if (!accordion) return;
+
+        const items = accordion.querySelectorAll(".collapse");
+
+        items.forEach(function (item) {
+          item.addEventListener("show.bs.collapse", function () {
+            items.forEach(function (otherItem) {
+              if (otherItem !== item) {
+                const bsCollapse =
+                  bootstrap.Collapse.getInstance(otherItem) ||
+                  new bootstrap.Collapse(otherItem, {
+                    toggle: false,
+                  });
+
+                bsCollapse.hide();
+              }
+            });
+          });
+        });
+      });
+    </script>
   </body>
 </html>
