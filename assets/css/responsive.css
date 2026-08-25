@@ -18,7 +18,7 @@
 
 /* 1025px to 1280px (Laptops / Small Desktops) */
 @media (min-width: 1025px) and (max-width: 1280.98px) {
-  #header .container-fluid {
+  #header .container {
     padding-left: 2rem;
     padding-right: 2rem;
   }
@@ -194,12 +194,7 @@
   #home .owl-nav button.owl-next {
     right: 5px !important;
   }
-  .custom-img-caption h5 {
-    font-size: 13px !important;
-  }
-  .custom-img-caption p {
-    font-size: 11px !important;
-  }
+ 
   .golden-three-circles {
     width: 120px;
     height: 120px;
@@ -207,10 +202,7 @@
       0 0 0 20px rgba(212, 160, 23, 0.2),
       0 0 0 40px rgba(212, 160, 23, 0.08);
   }
-  .golden-circle-bg {
-    width: 200px;
-    height: 200px;
-  }
+
 }
 
 /* 320px to 480px (Small Mobile Devices) */
@@ -259,6 +251,13 @@
   .lead {
     padding: 5px;
   }
+  #header.header-scrolled .navbar-brand img {
+  height: 36px;
+  width: auto;
+  margin-top: 4px;
+}
+
+
 }
 
 /* Mobile Toggle & Close Button Fix */

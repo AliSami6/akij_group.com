@@ -60,100 +60,6 @@
 }
 
 
-
-/* Custom Image Overlay Caption */
-.custom-img-caption {
-  z-index: 2;
-  background-color: var(--custom-img-color) !important;
-  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.15);
-  border-top-left-radius: 8px !important;
-}
-
-
-
-/* Chairman Circle Layer Effect */
-
-/* Container Alignment */
-.chairman-profile-wrapper {
-  width: 100%;
-  max-width: 340px;
-}
-
-/* 3 Concentric Round Shapes using CSS Box-Shadow */
-.golden-three-circles {
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 160px;
-  height: 160px;
-  border-radius: 50%;
-  background-color: rgba(212, 160, 23, 0.35); /* Inner Circle 1 */
-  /* Layer 2 and Layer 3 created using spread shadows */
-  box-shadow:
-    0 0 0 30px rgba(212, 160, 23, 0.2),
-    /* Circle 2 */ 0 0 0 60px rgba(212, 160, 23, 0.08); /* Circle 3 */
-  z-index: 1;
-}
-
-/* Golden Box for Name & Designation */
-.golden-name-badge {
-  background-color: var(--golden-name-badge) !important;
-  box-shadow: 0 10px 25px rgba(212, 160, 23, 0.3);
-  border-radius: 12px !important;
-  width: 90%;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/* Multi-layer Round Golden Circle Effect behind the image */
-.golden-circle-bg {
-  position: absolute;
-  top: 45%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 250px;
-  height: 250px;
-  border-radius: 50%;
-  /* Concentric golden circle gradient matching the reference image */
-  background: radial-gradient(
-    circle,
-    rgba(212, 160, 23, 0.45) 0%,
-    rgba(212, 160, 23, 0.35) 40%,
-    rgba(212, 160, 23, 0.2) 65%,
-    rgba(212, 160, 23, 0.08) 85%,
-    rgba(212, 160, 23, 0) 100%
-  );
-  z-index: 1;
-}
-
-/* Golden Box for Name & Designation */
-.golden-name-badge {
-  background-color: var(--golden-name-badge) !important; /* Golden Background */
-  box-shadow: 0 8px 20px rgba(212, 160, 23, 0.35);
-  border-radius: 12px !important;
-  width: 90%;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-
-/* Glassmorphism Effect for Right Card */
-.custom-glass-card {
-  background: rgba(255, 255, 255, 0.85) !important;
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.4) !important;
-  transition:
-    transform 0.3s ease,
-    shadow 0.3s ease;
-}
-
-.custom-glass-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12) !important;
-}
-
 /* Icon Animation Effect */
 .stat-icon-wrapper {
   position: relative;
@@ -174,7 +80,259 @@
 .bg-primary-soft {
   background-color: rgba(0, 136, 204, 0.1);
 }
+/* =========================================================
+   AKIJ LEADERSHIP / PROFILE SECTION (Dark Background)
+   ========================================================= */
 
+.akij-leadership-section {
+    background: #0d0d0d; /* Premium Black Background */
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   PROFILE ROW
+   ========================================================= */
+
+.akij-profile-row {
+    min-height: 520px;
+}
+
+
+/* =========================================================
+   IMAGE
+   ========================================================= */
+
+.akij-profile-image-wrapper {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.akij-profile-image {
+    display: block;
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+    /* ছবির চারপাশে হালকা গোল্ডেন গ্লো দেওয়ার জন্য (Optional) */
+    filter: drop-shadow(0px 10px 20px rgba(212, 175, 55, 0.15));
+}
+
+.akij-founder-image .akij-profile-image,
+.akij-chairman-image .akij-profile-image {
+    max-height: 560px;
+}
+
+
+/* =========================================================
+   CONTENT
+   ========================================================= */
+
+.akij-profile-content {
+    max-width: 760px;
+}
+
+
+/* =========================================================
+   GOLDEN TAG / LABEL
+   ========================================================= */
+
+.akij-section-tag {
+    display: inline-block;
+    background: #c5a059; /* Elegant Metallic Gold */
+    color: #000000; /* Deep Black Text */
+    font-size: 14px;
+    font-weight: 800;
+    line-height: 1;
+    padding: 9px 16px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 2px;
+}
+
+
+/* =========================================================
+   MAIN TITLE (Gold Text)
+   ========================================================= */
+
+.akij-profile-title {
+    color: #dfb76c; /* Bright Premium Gold */
+    font-size: 34px;
+    line-height: 1.25;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 0;
+    letter-spacing: 0.5px;
+}
+
+
+/* =========================================================
+   DESCRIPTION (Light Off-White/Silver Text)
+   ========================================================= */
+
+.akij-profile-desc {
+    color: var(--bg-dark-charcoal); /* Smooth contrast reading text */
+    font-size: 16px;
+    line-height: 1.75;
+    font-weight: 300;
+    margin-bottom: 0;
+}
+
+
+/* =========================================================
+   AUTHOR (Gold & White)
+   ========================================================= */
+
+.akij-profile-author {
+    margin-top: 25px;
+    border-left: 3px solid #c5a059; /* Left Border Accent */
+    padding-left: 15px;
+}
+
+.akij-author-name {
+    color: #dfb76c; /* Gold Name */
+    font-size: 19px;
+    line-height: 1.4;
+    font-weight: 600;
+}
+
+.akij-author-name span {
+    color: #777;
+    font-weight: 400;
+}
+
+.akij-author-role {
+    color: #000; /* White Designation */
+    font-size: 15px;
+    line-height: 1.5;
+    margin-top: 3px;
+}
+
+.akij-author-role span {
+    color: var(--akij-gold) !important; /* Underline text gold */
+}
+
+
+/* =========================================================
+   DIVIDER (Gold Fade)
+   ========================================================= */
+
+.akij-profile-divider {
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(90deg, rgba(197, 160, 89, 0) 0%, rgba(197, 160, 89, 0.4) 50%, rgba(197, 160, 89, 0) 100%);
+    margin: 60px 0;
+}
+
+
+/* =========================================================
+   DESKTOP IMAGE POSITION
+   ========================================================= */
+
+@media (min-width: 992px) {
+    .akij-founder-image {
+        justify-content: flex-end;
+        padding-right: 20px;
+    }
+
+    .akij-chairman-image {
+        justify-content: flex-start;
+        padding-left: 20px;
+    }
+}
+
+
+/* =========================================================
+   TABLET & MOBILE RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 991.98px) {
+    .akij-profile-row {
+        min-height: auto;
+    }
+
+    .akij-founder-image .akij-profile-image,
+    .akij-chairman-image .akij-profile-image {
+        max-height: 480px;
+    }
+
+    .akij-profile-title {
+        font-size: 28px;
+    }
+
+    .akij-profile-desc {
+        font-size: 16px;
+        line-height: 1.7;
+    }
+
+    .akij-profile-divider {
+        margin: 45px 0;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .akij-leadership-section {
+        padding-top: 40px !important;
+        padding-bottom: 40px !important;
+    }
+
+    .akij-profile-image-wrapper {
+        margin-bottom: 15px;
+    }
+
+    .akij-founder-image .akij-profile-image,
+    .akij-chairman-image .akij-profile-image {
+        max-height: 380px;
+        max-width: 90%;
+    }
+
+    .akij-section-tag {
+        font-size: 12px;
+        padding: 8px 14px;
+        margin-bottom: 15px !important;
+    }
+
+    .akij-profile-title {
+        font-size: 24px;
+        line-height: 1.3;
+    }
+
+    .akij-profile-desc {
+        font-size: 15px;
+        line-height: 1.65;
+    }
+
+    .akij-author-name {
+        font-size: 17px;
+    }
+
+    .akij-author-role {
+        font-size: 14px;
+    }
+
+    .akij-profile-divider {
+        margin: 35px 0;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .akij-founder-image .akij-profile-image,
+    .akij-chairman-image .akij-profile-image {
+        max-height: 320px;
+        max-width: 95%;
+    }
+
+    .akij-profile-title {
+        font-size: 22px;
+    }
+
+    .akij-profile-desc {
+        font-size: 14px;
+    }
+}
 /* Custom list items for countries */
 .custom-country-list li {
   margin-bottom: 8px;
@@ -2261,11 +2419,7 @@ h2 em {
   --akij-bg-light: #f7f7f7;
 }
 
-.akij-about-section {
-  background-color: var(--akij-bg-light);
-  padding: 80px 0;
-  position: relative;
-}
+
 
 /* Image Grid Styling */
 .akij-image-grid-wrapper {
@@ -2519,9 +2673,7 @@ h2 em {
 
 /* --- MOBILE RESPONSIVE MEDIA QUERIES --- */
 @media (max-width: 991px) {
-  .akij-about-section {
-    padding: 50px 0;
-  }
+
   .akij-image-grid-wrapper {
     margin-bottom: 20px;
   }
@@ -2683,9 +2835,66 @@ h2 em {
   font-family: cursive;
 }
 
-#header.header-scrolled .navbar-brand img {
-  height: 36px;
-  width: auto;
-  margin-top: 4px;
+
+
+/* Mobile Specific Optimizations */
+@media (max-width: 575.98px) {
+  .stat-card {
+    padding: 1.25rem 0.5rem !important; /* Prevents overflow on narrow screens */
+  }
+  
+  .counter-number {
+    font-size: 1.75rem !important; /* Keep numbers bold and clear */
+  }
+  
+  .counter-label {
+    font-size: 0.7rem !important;
+    line-height: 1.3 !important;
+  }
+}
+/* Checklist Badge Styling */
+.checklist-item {
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.03);
+  border-color: rgba(0, 0, 0, 0.08) !important;
 }
 
+.checklist-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+/* Year Badge */
+.timeline-badge {
+  display: inline-block;
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #c59d5f; /* Theme Primary/Golden Color */
+  letter-spacing: 0.5px;
+}
+
+/* Card Styling */
+.history-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-color: rgba(0, 0, 0, 0.06) !important;
+}
+
+.history-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.08) !important;
+}
+
+/* Mobile Specific Visual Fixes */
+@media (max-width: 575.98px) {
+  .history-checklist {
+    gap: 8px !important;
+  }
+  
+  .checklist-item {
+    padding: 6px 14px !important;
+  }
+  
+  .history-card {
+    padding: 1.25rem 1rem !important;
+  }
+}
