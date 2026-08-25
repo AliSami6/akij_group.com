@@ -207,7 +207,9 @@
   margin:3px;
   border-radius: 2px;
 }
-
+ .exportTitle,.exportTag,.countryTitle,.countryTag{
+    text-align: left !important;
+  }
 
 }
 @media (max-width: 420px) {
@@ -249,7 +251,12 @@
         font-size: 9px !important;
         padding: 5px 7px !important;
     }
-  
+    .exportTitle,.exportTag,.countryTitle,.countryTag{
+    text-align: left !important;
+  }
+  .list.list-icons.list-icons-style-2 li {
+    float: left;
+  }
 
 }
 
@@ -311,9 +318,14 @@
   margin:3px;
   border-radius: 2px;
 }
-  .appear-animation-visible{
+  .contactS_content{
       text-align: center;
     }
+     .exportTitle,.exportTag{
+    text-align: left !important;
+  }
+ 
+ 
 }
 
 /* Mobile Toggle & Close Button Fix */
